@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@justinribeiro/code-block": "^2.0.0",
+    "svelte-code-copy": "^1.0.14"
+  }
+}
