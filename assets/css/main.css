@@ -1,6 +1,17 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+/* @import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200"); */
+
+/* change font based off import .ttf file*/
+@font-face {
+    font-family: CustomFont;
+    src: url('/assets/fonts/Roboto-Light.ttf') format('truetype'), /* Modern Browsers */
+
+}
+
+/* body {
+    font-family: CustomFont, sans-serif; /* Use the font */
+
 
 /*
 	Visualize by TEMPLATED
@@ -25,6 +36,7 @@
 
 	body {
 		line-height: 1;
+		
 	}
 
 	ol, ul {
@@ -1440,7 +1452,8 @@
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.65);
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		/* font-family: "Source Sans Pro", Helvetica, sans-serif; */
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		font-size: 13pt;
 		font-weight: 200;
 		
@@ -1714,7 +1727,7 @@
 			content: "";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -1779,7 +1792,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -1880,7 +1893,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2560,7 +2573,7 @@
 				content: "X";
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'Comic Sans MS';
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2639,7 +2652,7 @@
 			#header .avatar img {
 				border-radius: 100%;
 				display: block;
-				width: 25em;
+				width: 20em;
 			}
 
 		@media screen and (max-width: 1280px) {
