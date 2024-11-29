@@ -2825,6 +2825,13 @@ nav.primary li {
         display: block; /* Ensure proper block-level centering */
     }
 
+	.pdf-embed {
+        width: 100%; /* Make it take the full width of the screen */
+        height: 70vh; /* Set a height relative to the viewport */
+        overflow: auto; /* Ensure scrolling if content overflows */
+        border: none; /* Remove any border for a cleaner look */
+    }
+
 }
 
 /* Make PDFs responsive */
