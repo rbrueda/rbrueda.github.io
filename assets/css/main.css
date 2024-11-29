@@ -2760,8 +2760,26 @@ nav.primary li {
         transition: transform 0.3s ease-in-out; /* Add a smooth transition */
     }
 
-	.pdf-embed {
+     /* Responsive PDF Embed */
+	 .pdf-embed {
+        width: 100%; /* Ensure PDF embed takes full width */
         height: 400px; /* Adjust the height for smaller screens */
+        overflow: hidden; /* Prevent scrollbars */
+    }
+
+    /* Logo adjustments for mobile */
+    #logo {
+        height: auto; /* Maintain the aspect ratio */
+        width: 80%; /* Make logo width responsive */
+        max-width: 150px; /* Set a maximum width for the logo */
+        margin-left: 0; /* Adjust the margin for centering */
+        margin-right: 0; /* Ensure no right margin */
+        display: block; /* Ensure it's treated as a block element */
+        margin-top: 10px; /* Optionally add top margin for spacing */
+        margin-bottom: 10px; /* Optionally add bottom margin for spacing */
+        max-height: 45px; /* Optional: set a max height for consistency */
+        margin-left: auto; /* Center the logo */
+        margin-right: auto; /* Center the logo */
     }
 }
 
