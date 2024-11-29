@@ -2777,6 +2777,16 @@ nav.primary li {
         margin: 10px auto; /* Center the logo with top and bottom margin */
         max-height: 45px; /* Optional: set a maximum height */
     }
+
+	/* Make avatar responsive */
+    .avatar {
+        width: 100%;         /* Ensure the avatar takes up full width */
+        height: auto;        /* Maintain aspect ratio */
+        max-width: 150px;    /* Set a max-width for the avatar on mobile */
+        margin-left: auto;   /* Center the avatar horizontally */
+        margin-right: auto;
+        display: block;      /* Make sure it's displayed as a block element */
+    }
 }
 
 /* Make PDFs responsive */
