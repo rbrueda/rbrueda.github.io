@@ -85,39 +85,44 @@
 						</ul>
 					  </nav>
 
-				<!-- Header -->
-					<header id="header">
-						<h1 id="year"> <strong>My Setup</strong></h1>
-						
-					</header>
-
-				<!-- Main -->
-					<section id="main">
-
-						<div class="row">
-							<div class = "column">
 				
-								<font size="+2"> 
-					 
-								<p>I am always looking for new ways to play around with my laptop which is why I decided to switch from the Windows OS to Linux OS. I first started with Linux Mint back in May 2023. It was definitely an adjustment since I did not have too much experience with
-                                    working with the Bash terminal other than using VirtualBox before that. I had also dealt with some hardware problems like Bluetooth issues and my camera and finger print sensor not working. Despite these issues, the change to a different OS gave me a different perspective to the different kinds of OS out there!
-                                </p>
-                                <p>Once I have gotten a solid foundation using Linux, I decided to use move to the Pop OS. This operating system gives the aesthetics of MacOS with the benefits of easily dual booting with Windows :) </p>
+        <!-- Header -->
+        <header id="header">
+            <h1 id="year"><strong>My Setup</strong></h1>
+        </header>
 
-						<p>
-						In my home screen, I am using a conky widget that shows the current date, time, and CPU credentials. To set up, I installed conky using:
-                    </p>
-                        <pre>  
+        <!-- Main -->
+        <section id="main">
+            <div class="row">
+                <div class="column">
+                    <font size="+2">
+                        <p>I am always looking for new ways to play around with my laptop which is why I decided to switch from the Windows OS to Linux OS. I first started with Linux Mint back in May 2023. It was definitely an adjustment since I did not have too much experience with
+							working with the Bash terminal other than using VirtualBox before that. I had also dealt with some hardware problems like Bluetooth issues and my camera and finger print sensor not working. Despite these issues, the change to a different OS gave me a different perspective to the different kinds of OS out there!
+						</p>
+						<p>Once I have gotten a solid foundation using Linux, I decided to use move to the Pop OS. This operating system gives the aesthetics of MacOS with the benefits of easily dual booting with Windows :) </p>
+
+							<p>
+							In my home screen, I am using a conky widget that shows the current date, time, and CPU credentials. To set up, I installed conky using:
+						</p>
+
+                        <!-- Code Block with Copy Button -->
+                        <button class="copy-btn" onclick="copyCode('code1')">Copy Code</button>
+                        <span id="copied-msg1" class="copied-msg">Copied!</span>
+                        <pre id="code1">
                             <code>
 sudo add-apt-repository ppa:teejee2008/ppa
 sudo apt-get update
 sudo apt-get install conky-manager
                             </code>
                         </pre> 
+
+                        <p>For the widget I came across a template from: <a href="https://www.deviantart.com/dobbie03/art/September-2012-Gnome-2-327097815">https://www.deviantart.com/dobbie03/art/September-2012-Gnome-2-327097815</a>. Here is my modified code for my current setup:</p>
                         
-								<p>For the widget I came across a template from: <a href="https://www.deviantart.com/dobbie03/art/September-2012-Gnome-2-327097815">https://www.deviantart.com/dobbie03/art/September-2012-Gnome-2-327097815</a>. Here is my modified code for my current setup:</p>
-								<pre>  
-                                    <code>
+                        <!-- Another Code Block with Copy Button -->
+                        <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
+                        <span id="copied-msg2" class="copied-msg">Copied!</span>
+                        <pre id="code2">
+                            <code>
 # Author url = http://dobbie03.deviantart.com/art/My-First-Conky-Config-327206399
 # Modified by Umair = http://www.NoobsLab.com
 
@@ -152,86 +157,68 @@ use_xft yes
 xftalpha 1
 xftfont Freesans:pixelsize=32
 
-#				fonts
-#	Blue Highway
-#	Zegoe Light - U
-#	Zekton
-#	Calibri
-#	Engebrechtre
-#	Opeln2001
-#	Pricedown
-
 TEXT
 ${font Allura :pixelsize= 50}${alignc}${time  %A, %r  }${font}
 ${font Flaemische Kanzleischrift :pixelsize=140}${alignc}${time %d %B, %Y}${font}
+                            </code>
+                        </pre> 
+						<p><b>NOTE: Some of the fonts will not work unless the font files (.ttf) are downloaded</b><br>
+							For other extensions, I am currently using:
+						   </p>
+						   <ul>
+							   <li>xpad extension to write my to-do lists</li>
+							   <li>Candy icons for my icon theme (<a href="https://www.gnome-look.org/p/1305251/">https://www.gnome-look.org/p/1305251/</a>)</li>
+							   <li>Sweet Dark application theme (<a href=https://www.gnome-look.org/p/1253385z>https://www.gnome-look.org/p/1253385</a>)</li>
+							   <li>Oxygen 19 Pink Blossom cursor icon (<a href="https://www.gnome-look.org/p/1197394">https://www.gnome-look.org/p/1197394</a>)</li>
+						   </ul>
 
+						   <p><b>NOTE: Here is the video I followed to configure the icons/themes: <a href="https://www.youtube.com/watch?v=513Roh2m3yM&t=513s">https://www.youtube.com/watch?v=513Roh2m3yM&t=513s</a></b><br>
+						   
 
-${font BankGothic Md BT:pixelsize=25}${alignc}[ CPU Usage: ${cpu}% | RAM Usage: ${mem} ]
-${font BankGothic Md BT:pixelsize=25}${alignc}[ Root: ${fs_free /} / ${fs_size /} ]
-${font BankGothic Md BT:pixelsize=25}${alignc}[ User: ${exec users} | System Uptime: ${uptime_short} ]
-${font BankGothic Md BT:pixelsize=25}${alignc}[ Net Up: ${if_existing /proc/net/route wlan0}${upspeed wlan0}${else}${if_existing /proc/net/route eth0}${upspeed eth0}${else}{endif}${endif} Net Down: ${if_existing /proc/net/route wlan0}${downspeed wlan0}${else}${if_existing /proc/net/route eth0}${downspeed eth0}${else}{endif}${endif} ]
-                                    </code>
-                                </pre> 
+						   </font>
+							   
+					   </div>
+				   </div>
+			   <!-- <h1 style="text-align:center;"></h1> -->
+				   <!-- Thumbnails -->
+					   
 
+			   </section>
 
-								<p><b>NOTE: Some of the fonts will not work unless the font files (.ttf) are downloaded</b><br>
-                                 For other extensions, I am currently using:
-                                </p>
-                                <ul>
-                                    <li>xpad extension to write my to-do lists</li>
-                                    <li>Candy icons for my icon theme (<a href="https://www.gnome-look.org/p/1305251/">https://www.gnome-look.org/p/1305251/</a>)</li>
-                                    <li>Sweet Dark application theme (<a href=https://www.gnome-look.org/p/1253385z>https://www.gnome-look.org/p/1253385</a>)</li>
-                                    <li>Oxygen 19 Pink Blossom cursor icon (<a href="https://www.gnome-look.org/p/1197394">https://www.gnome-look.org/p/1197394</a>)</li>
-                                </ul>
+		   <!-- Footer -->
+			   <footer id="footer">
+				   <p>&copy; 2024 Rocio Rueda. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Template used under license. All rights to the template are owned by <a href="http://templated.co">TEMPLATED</a> and are used under the terms of the <a href="LICENSE.txt">license</a> agreement. </p>				
+			   </footer>
 
-								<p><b>NOTE: Here is the video I followed to configure the icons/themes: <a href="https://www.youtube.com/watch?v=513Roh2m3yM&t=513s">https://www.youtube.com/watch?v=513Roh2m3yM&t=513s</a></b><br>
-                                
+	   </div>
 
-                                </font>
-									
-							</div>
-						</div>
-					<!-- <h1 style="text-align:center;"></h1> -->
-						<!-- Thumbnails -->
-							
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-					</section>
+    <script>
+        function copyCode(codeId) {
+            // Get the code content
+            var codeContent = document.getElementById(codeId).textContent;
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p>&copy; 2024 Rocio Rueda. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Template used under license. All rights to the template are owned by <a href="http://templated.co">TEMPLATED</a> and are used under the terms of the <a href="LICENSE.txt">license</a> agreement. </p>				
-					</footer>
+            // Create a temporary textarea element to copy the code to the clipboard
+            var textarea = document.createElement('textarea');
+            textarea.value = codeContent;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script>
-				function copyCode(codeId) {
-					// Get the code content
-					var codeContent = document.getElementById(codeId).textContent;
-		
-					// Create a temporary textarea element to copy the code to the clipboard
-					var textarea = document.createElement('textarea');
-					textarea.value = codeContent;
-					document.body.appendChild(textarea);
-					textarea.select();
-					document.execCommand('copy');
-					document.body.removeChild(textarea);
-		
-					// Show the "Copied!" message
-					var msgId = 'copied-msg' + codeId.charAt(codeId.length - 1);
-					var msgElement = document.getElementById(msgId);
-					msgElement.style.display = 'inline';
-					setTimeout(function() {
-						msgElement.style.display = 'none';
-					}, 2000);
-				}
-			</script>
-
-	</body>
+            // Show the "Copied!" message
+            var msgId = 'copied-msg' + codeId.charAt(codeId.length - 1);
+            var msgElement = document.getElementById(msgId);
+            msgElement.style.display = 'inline';
+            setTimeout(function() {
+                msgElement.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
 </html>
