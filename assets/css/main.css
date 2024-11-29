@@ -2759,34 +2759,28 @@ nav.primary li {
         -ms-transform: translateX(-480px);
         transition: transform 0.3s ease-in-out; /* Add a smooth transition */
     }
-
-     /* Responsive PDF Embed */
-	 .pdf-embed {
-        width: 100%; /* Ensure PDF embed takes full width */
-        height: 400px; /* Adjust the height for smaller screens */
-        overflow: hidden; /* Prevent scrollbars */
+    #header {
+        display: flex;               /* Use flexbox for easy alignment */
+        flex-direction: column;      /* Stack items vertically */
+        align-items: center;         /* Center items horizontally */
+        text-align: center;          /* Center the text */
+        padding: 20px;               /* Optional padding for spacing */
     }
 
-    /* Logo adjustments for mobile */
-    /* Logo adjustments for mobile */
-    #logo {
-        width: 100%; /* Ensure the logo takes up the full width */
-        max-width: 50px; /* Limit the logo size */
-        height: auto; /* Maintain the aspect ratio */
-        display: block; /* Make it a block-level element */
-        margin: 10px auto; /* Center the logo with top and bottom margin */
-        max-height: 45px; /* Optional: set a maximum height */
+    .avatar img {
+        width: 100%;                 /* Ensure the avatar takes up full width */
+        height: auto;                /* Maintain aspect ratio */
+        max-width: 150px;            /* Limit max width for the avatar */
+        margin-bottom: 10px;         /* Space between avatar and text */
+        border-radius: 50%;          /* Make the avatar circular (optional) */
     }
 
-	/* Make avatar responsive */
-    .avatar {
-        width: 100%;         /* Ensure the avatar takes up full width */
-        height: auto;        /* Maintain aspect ratio */
-        max-width: 150px;    /* Set a max-width for the avatar on mobile */
-        margin-left: auto;   /* Center the avatar horizontally */
-        margin-right: auto;
-        display: block;      /* Make sure it's displayed as a block element */
+    h1 {
+        font-size: 24px;             /* Adjust font size for mobile */
+        line-height: 1.4;            /* Adjust line height for better readability */
+        margin-top: 10px;            /* Add some space above the text */
     }
+
 }
 
 /* Make PDFs responsive */
