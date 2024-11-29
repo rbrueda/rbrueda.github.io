@@ -2768,18 +2768,14 @@ nav.primary li {
     }
 
     /* Logo adjustments for mobile */
+    /* Logo adjustments for mobile */
     #logo {
+        width: 100%; /* Ensure the logo takes up the full width */
+        max-width: 150px; /* Limit the logo size */
         height: auto; /* Maintain the aspect ratio */
-        width: 80%; /* Make logo width responsive */
-        max-width: 150px; /* Set a maximum width for the logo */
-        margin-left: 0; /* Adjust the margin for centering */
-        margin-right: 0; /* Ensure no right margin */
-        display: block; /* Ensure it's treated as a block element */
-        margin-top: 10px; /* Optionally add top margin for spacing */
-        margin-bottom: 10px; /* Optionally add bottom margin for spacing */
-        max-height: 45px; /* Optional: set a max height for consistency */
-        margin-left: auto; /* Center the logo */
-        margin-right: auto; /* Center the logo */
+        display: block; /* Make it a block-level element */
+        margin: 10px auto; /* Center the logo with top and bottom margin */
+        max-height: 45px; /* Optional: set a maximum height */
     }
 }
 
