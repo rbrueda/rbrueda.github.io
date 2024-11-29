@@ -2636,11 +2636,13 @@
 			background-color: rgba(255, 255, 255, 0.075);
 		}
 
-			#header .avatar img {
-				border-radius: 100%;
-				display: block;
-				width: 25em;
-			}
+		#header .avatar img {
+			border-radius: 100%;
+			display: block;
+			width: 15vw; /* Set width as a percentage of the viewport width */
+			max-width: 400px; /* Limit the maximum size */
+			height: auto; /* Maintain aspect ratio */
+		}
 
 		@media screen and (max-width: 1280px) {
 
@@ -2760,11 +2762,14 @@ nav.primary li {
         transition: transform 0.3s ease-in-out; /* Add a smooth transition */
     }
     #header {
-        display: flex;               /* Use flexbox for easy alignment */
+        display: flex;               /* Use flexbox for alignment */
         flex-direction: column;      /* Stack items vertically */
         align-items: center;         /* Center items horizontally */
-        text-align: center;          /* Center the text */
+        justify-content: center;     /* Center items vertically if necessary */
+        width: 100%;                 /* Ensure header takes full width */
+        text-align: center;          /* Center the text inside */
         padding: 20px;               /* Optional padding for spacing */
+        box-sizing: border-box;      /* Include padding in width calculation */
     }
 
 	#header .avatar {
@@ -2796,52 +2801,29 @@ nav.primary li {
         margin-top: 10px;            /* Add some space above the text */
     }
 
-	.row {
+    h1, p {
+        text-align: center;          /* Center text horizontally */
+        margin: 0 auto;              /* Center block elements */
+        display: block;              /* Ensure proper block-level centering */
+        width: 100%;                 /* Allow text to span the full container width */
+        box-sizing: border-box;      /* Include padding in width calculation */
+    }
+
+    .row {
         display: flex;
-        flex-direction: column; /* Stack the content vertically */
+        flex-direction: column;      /* Stack content vertically */
     }
 
     .row .column {
-        width: 100%; /* Full width for both columns */
-        padding: 10px; /* Optional padding for spacing */
-    }
-
-    .row .column:nth-child(2) {
-        order: -1; /* Move the second column (text) to appear first */
+        width: 100%;                 /* Ensure full width for columns */
+        padding: 10px;               /* Optional padding */
+        text-align: center;          /* Center text inside columns */
     }
 
     img {
-        max-width: 100%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;             /* Ensure responsive images */
+        height: auto;                /* Maintain aspect ratio */
     }
-
-    #header {
-        text-align: center; /* Center header text for mobile */
-    }
-
-    p, h1 {
-        text-align: center; /* Center-align text */
-        margin: 0 auto; /* Remove all default margins */
-        display: block; /* Ensure proper block-level centering */
-    }
-
-	.pdf-embed {
-        width: 100%; /* Make it take the full width of the screen */
-        height: 70vh; /* Set a height relative to the viewport */
-        overflow: auto; /* Ensure scrolling if content overflows */
-        border: none; /* Remove any border for a cleaner look */
-    }
-
-}
-
-/* Make PDFs responsive */
-.pdf-embed {
-    width: 100%; /* Make the embed take full width of the container */
-    height: 600px; /* Set a fixed height for the embedded PDFs */
-    max-width: 100%; /* Ensure the width doesn't exceed the viewport */
-    border: none; /* Remove any borders from the embedded PDFs */
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; /* Center the PDF horizontally */
 }
 
 
