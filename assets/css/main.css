@@ -1,17 +1,6 @@
 @charset "UTF-8";
-/* @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200"); */
-
-/* change font based off import .ttf file*/
-@font-face {
-    font-family: CustomFont;
-    src: url('/assets/fonts/Roboto-Light.ttf') format('truetype'), /* Modern Browsers */
-
-}
-
-/* body {
-    font-family: CustomFont, sans-serif; /* Use the font */
-
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
 
 /*
 	Visualize by TEMPLATED
@@ -36,7 +25,6 @@
 
 	body {
 		line-height: 1;
-		
 	}
 
 	ol, ul {
@@ -1452,8 +1440,7 @@
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.65);
-		/* font-family: "Source Sans Pro", Helvetica, sans-serif; */
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 13pt;
 		font-weight: 200;
 		
@@ -1727,7 +1714,7 @@
 			content: "";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -1792,7 +1779,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				font-family: FontAwesome;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -1893,7 +1880,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2573,7 +2560,7 @@
 				content: "X";
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				font-family: 'Comic Sans MS';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2652,7 +2639,7 @@
 			#header .avatar img {
 				border-radius: 100%;
 				display: block;
-				width: 20em;
+				width: 25em;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -2763,14 +2750,93 @@ nav.primary li {
 
 /* For Mobile */
 @media screen and (max-width: 480px) {
-	nav.primary{
-		width: 100%;
-		transform: translatex(-480px);
-		-moz-transform: translatex(-480px);
-		-webkit-transform: translatex(-480px);
-		-ms-transform: translatex(-480px);
-	}
-	
+    /* Primary Navigation - Sliding effect */
+    nav.primary {
+        width: 100%;
+        transform: translateX(-480px); /* Initially hide the navigation */
+        -moz-transform: translateX(-480px);
+        -webkit-transform: translateX(-480px);
+        -ms-transform: translateX(-480px);
+        transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+    }
+
+    /* Hamburger menu (visible on mobile) */
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* When the menu is toggled, it will slide in */
+    #menuToggle:checked + .primary {
+        transform: translateX(0); /* Slide the menu into view */
+    }
+
+    /* Menu items in primary navigation (centering on mobile) */
+    .primary ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fff; /* Set background color */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh; /* Make the menu full height on mobile */
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .primary ul li {
+        margin: 15px 0;
+        font-size: 18px; /* Adjust font size */
+    }
+
+    /* Text Adjustments for Mobile */
+    h1 {
+        font-size: 24px; /* Make heading smaller for mobile */
+    }
+
+    p {
+        font-size: 16px; /* Adjust paragraph text size */
+    }
+
+    /* Ensure images are responsive on mobile */
+    img {
+        width: 100%; /* Ensure images take up the full container width */
+        height: auto; /* Maintain image aspect ratio */
+    }
+
+    /* Stack columns on mobile */
+    .row {
+        display: block; /* Make columns stack on mobile */
+    }
+
+    .column {
+        width: 100%; /* Each column takes full width */
+        margin-bottom: 20px; /* Space between stacked columns */
+    }
+
+	.pdf-embed {
+        height: 400px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* Make PDFs responsive */
+.pdf-embed {
+    width: 100%; /* Make the embed take full width of the container */
+    height: 600px; /* Set a fixed height for the embedded PDFs */
+    max-width: 100%; /* Ensure the width doesn't exceed the viewport */
+    border: none; /* Remove any borders from the embedded PDFs */
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the PDF horizontally */
 }
 
 

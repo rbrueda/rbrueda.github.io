@@ -12,29 +12,49 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="assets/css/hamburgers.css" rel="stylesheet">
 		<link rel="shortcut icon" href="images\SmallLogo.ico" type="image/x-icon"/>
+
+		<style type="text/css">
+			* {
+			  box-sizing: border-box;
+			}
+	
+			.column {
+			  float: right;
+			  width: 95%;
+			  padding: 0px;
+			}
+	
+			.row::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+	
+			/* Button styling */
+			.copy-btn {
+			  padding: 5px 10px;
+			  color: white;
+			  border: none;
+			  cursor: pointer;
+			  border-radius: 5px;
+			  font-size: 16px;
+	
+			  /* Add white outer box */
+				box-shadow:rgba(255, 255, 255, 0.35); /* 3px white outer border effect */
+			}
+	
+			.copy-btn:hover {
+			  background-color: #2e1e56;
+			}
+	
+			.copied-msg {
+			  color: rgba(255, 255, 255, 0.35);;
+			  display: none;
+			  font-size: 14px;
+			}
+	</style>
+
 	</head>
-
-	<style type="text/css">
-
-		/* formatting for rows and column separating where images and text will be displayed */
-		* {
-		  box-sizing: border-box;
-		}
-		
-		.column {
-		  float: right;
-		  width: 95%;
-		  padding: 0px;
-		}
-		
-		.row::after {
-		  content: "";
-		  clear: both;
-		  display: table;
-		}
-		
-		
-		</style>
 
 	<body>
 
@@ -189,6 +209,29 @@ ${font BankGothic Md BT:pixelsize=25}${alignc}[ Net Up: ${if_existing /proc/net/
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function copyCode(codeId) {
+					// Get the code content
+					var codeContent = document.getElementById(codeId).textContent;
+		
+					// Create a temporary textarea element to copy the code to the clipboard
+					var textarea = document.createElement('textarea');
+					textarea.value = codeContent;
+					document.body.appendChild(textarea);
+					textarea.select();
+					document.execCommand('copy');
+					document.body.removeChild(textarea);
+		
+					// Show the "Copied!" message
+					var msgId = 'copied-msg' + codeId.charAt(codeId.length - 1);
+					var msgElement = document.getElementById(msgId);
+					msgElement.style.display = 'inline';
+					setTimeout(function() {
+						msgElement.style.display = 'none';
+					}, 2000);
+				}
+			</script>
 
 	</body>
 </html>
