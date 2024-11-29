@@ -2815,11 +2815,6 @@ nav.primary li {
         height: auto; /* Maintain aspect ratio */
     }
 
-    p, h1 {
-        text-align: center; /* Center-align text */
-        margin: 10px 0; /* Add some spacing for readability */
-    }
-
 }
 
 /* Make PDFs responsive */
