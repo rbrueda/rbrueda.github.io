@@ -2761,6 +2761,19 @@ nav.primary li {
         -ms-transform: translateX(-480px);
         transition: transform 0.3s ease-in-out; /* Add a smooth transition */
     }
+
+	.content {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .text {
+        order: -1; /* Move text to appear first */
+    }
+
+    .image {
+        order: 0; /* Keep image below text */
+    }
+
     #header {
         display: flex;               /* Use flexbox for alignment */
         flex-direction: column;      /* Stack items vertically */
@@ -2802,12 +2815,12 @@ nav.primary li {
     }
 
     h1, p {
-        text-align: center;          /* Center text horizontally */
-        margin: 0 auto;              /* Center block elements */
-        display: block;              /* Ensure proper block-level centering */
-        width: 100%;                 /* Allow text to span the full container width */
-        box-sizing: border-box;      /* Include padding in width calculation */
-    }
+		text-align: left;               /* Align text to the left */
+		margin: 0 0 0 10px;             /* Add a slight margin to the left (e.g., 10px) */
+		display: block;                 /* Ensure proper block-level centering */
+		width: 100%;                    /* Allow text to span the full container width */
+		box-sizing: border-box;         /* Include padding in width calculation */
+	}
 
     .row {
         display: flex;
