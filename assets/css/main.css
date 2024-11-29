@@ -2773,10 +2773,10 @@ nav.primary li {
         padding: 0.3em;              /* Reduce padding on smaller screens */
         border: solid 2px rgba(255, 255, 255, 0.25);  /* Slightly thinner border */
         background-color: rgba(255, 255, 255, 0.075);  /* Keep background consistent */
-        margin-top: 20px;            /* Space above the avatar */
+        margin-top: 50px;            /* Space above the avatar */
         margin-bottom: 10px;         /* Space below the avatar */
-        width: 150px;                /* Set a fixed width for the avatar */
-        height: 150px;               /* Set a fixed height for the avatar */
+        width: 200px;                /* Set a fixed width for the avatar */
+        height: 200px;               /* Set a fixed height for the avatar */
         display: flex;               /* Ensure child aligns properly */
         justify-content: center;     /* Center content horizontally */
         align-items: center;         /* Center content vertically */
@@ -2794,6 +2794,30 @@ nav.primary li {
         font-size: 24px;             /* Adjust font size for mobile */
         line-height: 1.4;            /* Adjust line height for better readability */
         margin-top: 10px;            /* Add some space above the text */
+    }
+
+	.row {
+        display: flex;
+        flex-direction: column; /* Stack the content vertically */
+    }
+
+    .row .column {
+        width: 100%; /* Full width for both columns */
+        padding: 10px; /* Optional padding for spacing */
+    }
+
+    .row .column:nth-child(2) {
+        order: -1; /* Move the second column (text) to appear first */
+    }
+
+    img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    p, h1 {
+        text-align: center; /* Center-align text */
+        margin: 10px 0; /* Add some spacing for readability */
     }
 
 }
