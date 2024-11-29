@@ -2768,6 +2768,8 @@ nav.primary li {
     }
 
 	#header .avatar {
+		border-radius: 100%;
+		display: inline-block;
         padding: 0.3em;              /* Reduce padding on smaller screens */
         border: solid 2px rgba(255, 255, 255, 0.25);  /* Slightly thinner border */
         background-color: rgba(255, 255, 255, 0.075);  /* Keep background consistent */
@@ -2778,7 +2780,8 @@ nav.primary li {
         width: 100%;                 /* Ensure the avatar takes up full width */
         height: auto;                /* Maintain aspect ratio */
         max-width: 150px;            /* Limit max width for the avatar */
-        margin-bottom: 10px;         /* Space between avatar and text */
+        margin-top: 20px;			/* to limit space between logo and avatar */
+		margin-bottom: 10px;         /* Space between avatar and text */
         border-radius: 50%;          /* Make the avatar circular (optional) */
     }
 
