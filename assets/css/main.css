@@ -2815,6 +2815,16 @@ nav.primary li {
         height: auto; /* Maintain aspect ratio */
     }
 
+    #header {
+        text-align: center; /* Center header text for mobile */
+    }
+
+    p, h1 {
+        text-align: center; /* Center-align text */
+        margin: 0 auto; /* Remove all default margins */
+        display: block; /* Ensure proper block-level centering */
+    }
+
 }
 
 /* Make PDFs responsive */
