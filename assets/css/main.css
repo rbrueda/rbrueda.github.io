@@ -2749,7 +2749,7 @@ nav.primary li {
 	position: sticky;
 } */
 
-/* For Mobile */
+/* for mobile */
 @media screen and (max-width: 480px) {
     /* Primary Navigation - Sliding effect */
     nav.primary {
@@ -2761,7 +2761,20 @@ nav.primary li {
         transition: transform 0.3s ease-in-out; /* Add a smooth transition */
     }
 
-	#header {
+	.content {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .text {
+        order: -1; /* Move text to appear first */
+    }
+
+    .image {
+        order: 0; /* Keep image below text */
+		text-align: center;
+    }
+
+    #header {
         display: flex;               /* Use flexbox for alignment */
         flex-direction: column;      /* Stack items vertically */
         align-items: center;         /* Center items horizontally */
@@ -2795,47 +2808,22 @@ nav.primary li {
         border-radius: 50%;          /* Make the image circular */
     }
 
-    .content {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .text {
-        order: -1; /* Move text to appear first */
-    }
-
-    .image {
-        order: 0; /* Keep image below text */
+    h1 {
+        font-size: 24px;             /* Adjust font size for mobile */
+        line-height: 1.4;            /* Adjust line height for better readability */
+        margin-top: 10px;            /* Add some space above the text */
 		text-align: center;
     }
 
-    #main .row {
-        display: flex;
-        flex-direction: column;  /* Stack content vertically */
-    }
-
-    .row .column {
-        width: 100%;              /* Ensure columns are full width on small screens */
-        padding: 10px;            /* Optional padding for spacing */
-        text-align: center;       /* Center content inside the column */
-    }
-
-    .row .column img {
-        max-width: 100%;          /* Ensure responsive images */
-        height: auto;             /* Maintain aspect ratio */
-        display: block;           /* Makes the image a block-level element */
-        margin-left: auto;        /* Center horizontally */
-        margin-right: auto;       /* Center horizontally */
-    }
-
     p {
-        text-align: left;         /* Align text to the left */
-        margin: 0 0 10px 0;       /* Add some space below paragraphs */
-        display: block;           /* Ensure proper block-level layout */
-        width: 100%;              /* Allow text to span full width */
-        box-sizing: border-box;   /* Include padding in width calculation */
-    }
+		text-align: left;               /* Align text to the left */
+		margin: 0 0 0 10px;             /* Add a slight margin to the left (e.g., 10px) */
+		display: block;                 /* Ensure proper block-level centering */
+		width: 100%;                    /* Allow text to span the full container width */
+		box-sizing: border-box;         /* Include padding in width calculation */
+	}
 
-    /* Adjust image order for mobile (if necessary) */
+	/* Adjust image order for mobile (if necessary) */
     .image {
         order: 1;  /* Ensure images come after text */
 		text-align: center;
@@ -2845,12 +2833,22 @@ nav.primary li {
         order: 0;  /* Ensure text comes before images */
     }
 
-    /* Adjusting fonts for better readability on small screens */
-    h1 {
-        font-size: 24px; /* Adjust font size for mobile */
-        line-height: 1.4;
-        margin-top: 10px;
-        text-align: center;
+	
+
+    .row {
+        display: flex;
+        flex-direction: column;      /* Stack content vertically */
+    }
+
+    .row .column {
+        width: 100%;                 /* Ensure full width for columns */
+        padding: 10px;               /* Optional padding */
+        text-align: center;          /* Center text inside columns */
+    }
+
+    img {
+        max-width: 100%;             /* Ensure responsive images */
+        height: auto;                /* Maintain aspect ratio */
     }
 }
 
