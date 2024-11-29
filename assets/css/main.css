@@ -2783,7 +2783,7 @@ nav.primary li {
         overflow: hidden;            /* Ensure the image doesn't overflow */
     }
 
-    .avatar img {
+    #header .avatar img {
         width: 100%;                 /* Ensure the avatar takes up full width */
         height: 100%;                /* Ensure the avatar takes up full height */
         object-fit: cover;           /* Maintain aspect ratio and cover the container */
