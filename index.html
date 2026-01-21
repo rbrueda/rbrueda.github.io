@@ -47,7 +47,13 @@
 				align-items: center;
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 			}
-			
+
+			/* Small mobile readability boost */
+			.page-section p {
+				font-size: 1.05em;
+				line-height: 1.75;
+			}
+
 			.desktop-nav .logo {
 				height: 40px;
 				width: auto;
@@ -81,6 +87,13 @@
 			/* Add padding to body for fixed nav */
 			body {
 				padding-top: 70px;
+			}
+		}
+
+		/* Even smaller screens */
+		@media (max-width: 480px) {
+			.page-section p {
+				font-size: 1em;
 			}
 		}
 		
@@ -269,7 +282,15 @@
 			margin-top: 1em;
 			padding: 1em;
 			font-size: 1.1em;
+
+			/* FIX */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			line-height: 1;
 		}
+
 		
 		/* General section improvements */
 		.page-section {
@@ -395,7 +416,15 @@
 			transition: all 0.3s ease;
 			font-weight: 300;
 			font-family: inherit;
+
+			/* FIX */
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			line-height: 1;
 		}
+
 		
 		.view-more-btn:hover {
 			background-color: #FF6382;
@@ -813,11 +842,25 @@
 					<!-- Visible projects (first 6) -->
 					<section class="thumbnails">
 						<div>
+							<a href="https://github.com/sanvikaushik/stockhouse">
+								<img src="images\projects\15.jpgf" alt="" />
+								<h3>BrickByBrick ~ Jan - Jan 2026<br>- Shared-equity platform simulating stock-style home investments using Python, JavaScript, Snowflake, and MongoDB</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Drug-Embedding-Algorithms">
+								<img src="images\projects\14.jpg" alt="" />
+								<h3>Drug Embedding Algorithms ~ Jun - Aug 2025<br>- Investigated and integrated recent drug embedding algorithms to enhance the HGNN’s ability to model DDI prediction</h3>
+							</a>
+						</div>
+						<div>
 							<a href="https://github.com/rbrueda/Optimized-Frequent-Items-Algorithms">
 								<img src="images\projects\13.png" alt="" />
 								<h3>Optimized Frequent Itemset Algorithms ~ Mar - Mar 2025<br>- Optimized Apriori and PCY algorithms ran on MovieLens 100K dataset</h3>
 							</a>
 						</div>
+					</section>
+					<section class="thumbnails">
 						<div>
 							<a href="https://github.com/rbrueda/Disaster-Tweets">
 								<img src="images\projects\12.png" alt="" />
@@ -830,15 +873,16 @@
 								<h3>Light Lumificient ~ Feb - Mar 2024<br>- A multi-agent smart home simulator, developed by a team of 4, that produces energy-efficient results using SciPy, Tkinter, PySwip, and Matplotlib</h3>
 							</a>
 						</div>
-					</section>
-
-					<section class="thumbnails">
 						<div>
 							<a href="https://github.com/zayatMark/3220-group-project">
 								<img src="images\projects\10.png" alt="" />
 								<h3>Open Data Catalogue ~ Mar - Mar 2024<br>- Web portal for viewing Windsor open data sets built using React.js</h3>
 							</a>
 						</div>
+					</section>
+					<!-- Hidden projects (expandable) -->
+					<div id="more-projects" class="projects-expandable" style="display: none;">
+					<section class="thumbnails">
 						<div>
 							<a href="https://github.com/gabrielrueda/win-hacks-2024">
 								<img src="images\projects\9.png" alt="" />
@@ -851,17 +895,14 @@
 								<h3>Sentiment Analysis ~ Sept 2024 - April 2025<br>- Research-based project using Reddit API, IBM NLP API, and Pandas for analyizing sentiments</h3>
 							</a>
 						</div>
-					</section>
-					
-					<!-- Hidden projects (expandable) -->
-					<div id="more-projects" class="projects-expandable" style="display: none;">
-						<section class="thumbnails">
 							<div>
 								<a href="https://github.com/jpanahon/SpaceApps2023">
 									<img src="images\projects\2.png" alt="" />
 									<h3>What's Up With This Water? ~ Oct - Oct 2023<br>- SpaceApps 2023 Hackathon Submission<br>- Full-stack application on a team of 6 using Python, Javascript, HTML, CSS, Django, and Streamlit</h3>
 								</a>
 							</div>
+						</section>
+						<section class="thumbnails">
 							<div>
 								<a href="https://github.com/rbrueda/Services-Map">
 									<img src="images\projects\3.png" alt="" />
@@ -874,15 +915,14 @@
 									<h3>Number Guessing Game ~ Aug - Aug 2023<br>- Final project for COMP-2120 class using Java Swing</h3>
 								</a>
 							</div>
-						</section>
-						
-						<section class="thumbnails">
 							<div>
 								<a href="https://github.com/rbrueda/System-of-Style">
 									<img src="images\projects\4.png" alt="" />
 									<h3>System of Style ~ April - June 2023<br>- Square Developer Hackathon 2023<br>- Cross-platform hair salon booking system using C++, Qt, MariaDB, and Square API on a team of 2</h3>
 								</a>
 							</div>
+							</section>
+							<section class="thumbnails">
 							<div>
 								<a href="https://github.com/rbrueda/Slot-Savory">
 									<img src="images\projects\6.jpg" alt="" />
@@ -895,9 +935,6 @@
 									<h3>Car Racing Game ~ Nov - Dec 2021<br>- Interactive two-dimensional game built using Pygame</h3>
 								</a>
 							</div>
-						</section>
-
-						<section class="thumbnails">
 							<div>
 								<a href="https://github.com/rbrueda/Guns-And-Spaceships">
 									<img src="images\projects\8.gif" alt="" />
