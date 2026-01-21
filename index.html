@@ -23,6 +23,7 @@
 		#heading {
 			text-align: center;
 			font-size: 45px;
+			margin-bottom: 3em;
 		}
 		
 		/* Modern Desktop Navigation */
@@ -103,6 +104,612 @@
 		html {
 			scroll-behavior: smooth;
 		}
+		
+		/* About Section Improvements */
+		#about {
+			padding: 6em 0;
+		}
+		
+		#about .row {
+			display: flex;
+			gap: 3em;
+			align-items: flex-start;
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 2em;
+		}
+		
+		#about .column.image {
+			flex: 0 0 40%;
+			max-width: 500px;
+		}
+		
+		#about .column.text {
+			flex: 1;
+		}
+		
+		#about .column.image .image {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5em;
+		}
+		
+		#about .column.image img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		
+		#about .column.image img:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+		}
+		
+		#about .column.text p {
+			margin-bottom: 1.5em;
+			line-height: 1.8;
+			color: rgba(255, 255, 255, 0.85);
+			font-size: 1.05em;
+		}
+		
+		#about .column.text p:first-child {
+			font-size: 1.4em;
+			line-height: 1.6;
+			margin-bottom: 2em;
+			padding: 1.5em;
+			border-left: 4px solid #FF6382;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 8px;
+		}
+		
+		#about .column.text p b {
+			color: #FF6382;
+		}
+		
+		/* Responsive for About section */
+		@media screen and (max-width: 968px) {
+			#about .row {
+				flex-direction: column;
+			}
+			
+			#about .column.image {
+				flex: 1;
+				max-width: 100%;
+				width: 100%;
+			}
+			
+			#about .column.image .image {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			
+			#about .column.image img {
+				flex: 0 0 calc(50% - 0.75em);
+				max-width: 300px;
+			}
+		}
+		
+		@media screen and (max-width: 768px) {
+			#about .column.image .image {
+				flex-direction: column;
+			}
+			
+			#about .column.image img {
+				flex: 1;
+				max-width: 100%;
+			}
+		}
+		
+		/* Section Header Improvements */
+		#year {
+			font-size: 3.5em;
+			margin-bottom: 1.5em;
+			text-align: center;
+			position: relative;
+			padding-bottom: 0.5em;
+		}
+		
+		#year::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 4px;
+			background: linear-gradient(90deg, transparent, #FF6382, transparent);
+		}
+		
+		/* Section improvements */
+		.page-section header {
+			margin-bottom: 3em;
+		}
+		
+		/* Thumbnail improvements */
+		.thumbnails > div {
+			gap: 2em;
+		}
+		
+		.thumbnails a {
+			transition: all 0.3s ease;
+		}
+		
+		.thumbnails a:hover {
+			transform: translateY(-8px);
+		}
+		
+		.thumbnails h3 {
+			line-height: 1.6;
+			padding: 1em;
+		}
+		
+		/* Form improvements for contact */
+		#contact form {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 2em;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 12px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		
+		#contact input[type="text"],
+		#contact input[type="email"],
+		#contact textarea {
+			border-radius: 8px;
+			padding: 0.75em 1em;
+			font-size: 1em;
+		}
+		
+		#contact input[type="submit"] {
+			width: 100%;
+			margin-top: 1em;
+			padding: 1em;
+			font-size: 1.1em;
+		}
+		
+		/* General section improvements */
+		.page-section {
+			position: relative;
+		}
+		
+		.page-section header {
+			margin-bottom: 4em;
+		}
+		
+		/* Improve thumbnail cards */
+		.thumbnails a {
+			overflow: hidden;
+			border-radius: 12px;
+		}
+		
+		.thumbnails a img {
+			transition: transform 0.5s ease;
+		}
+		
+		.thumbnails a:hover img {
+			transform: scale(1.05);
+		}
+		
+		/* Improve projects section */
+		#projects {
+			padding: 6em 0;
+		}
+		
+		#projects .thumbnails > div {
+			margin-bottom: 3em;
+		}
+		
+		/* Improve papers section */
+		#papers {
+			padding: 6em 0;
+		}
+		
+		/* Improve videos section */
+		#videos {
+			padding: 6em 0;
+		}
+		
+		/* Improve extra section */
+		#extra {
+			padding: 6em 0;
+		}
+		
+		/* Improve contact section */
+		#contact {
+			padding: 6em 0;
+		}
+		
+		/* Better spacing for main content */
+		#main {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 0 2em;
+		}
+		
+		/* Improve header in home section */
+		#home header {
+			padding: 2em 0;
+		}
+		
+		#home header h1 {
+			font-size: 1.5em;
+			line-height: 1.8;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		
+		/* Improve icons in home section */
+		#home .icons {
+			display: flex;
+			justify-content: center;
+			gap: 1.5em;
+			margin-top: 2em;
+		}
+		
+		#home .icons li {
+			transition: transform 0.3s ease;
+		}
+		
+		#home .icons li:hover {
+			transform: translateY(-5px);
+		}
+		
+		/* Better avatar styling */
+		#home .avatar {
+			margin-bottom: 2.5em;
+		}
+		
+		#home .avatar img {
+			border: 3px solid rgba(255, 255, 255, 0.3);
+		}
+		
+		/* Smooth fade-in for sections */
+		.page-section {
+			animation: fadeIn 0.8s ease-in;
+		}
+		
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		/* View More Button Styles */
+		.view-more-btn {
+			background-color: transparent;
+			border: 2px solid #FF6382;
+			color: #FF6382;
+			padding: 1em 2.5em;
+			font-size: 1.1em;
+			border-radius: 50px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-weight: 300;
+			font-family: inherit;
+		}
+		
+		.view-more-btn:hover {
+			background-color: #FF6382;
+			color: white;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(255, 99, 130, 0.4);
+		}
+		
+		.view-more-btn:active {
+			transform: translateY(0);
+		}
+		
+		/* Expandable content animation */
+		.projects-expandable,
+		.papers-expandable,
+		.videos-expandable {
+			animation: slideDown 0.5s ease-out;
+		}
+		
+		@keyframes slideDown {
+			from {
+				opacity: 0;
+				max-height: 0;
+				transform: translateY(-20px);
+			}
+			to {
+				opacity: 1;
+				max-height: 5000px;
+				transform: translateY(0);
+			}
+		}
+		
+		/* ========== MOBILE STYLES ========== */
+		@media screen and (max-width: 768px) {
+			/* Remove body padding for mobile */
+			body {
+				padding-top: 0 !important;
+			}
+			
+			/* Better section spacing on mobile */
+			.page-section {
+				min-height: auto;
+				padding: 3em 1.5em;
+			}
+			
+			.page-section:first-of-type {
+				padding-top: 1em;
+			}
+			
+			/* Improve section headers on mobile */
+			#year {
+				font-size: 2.2em;
+				margin-bottom: 1.5em;
+			}
+			
+			#heading {
+				font-size: 2em;
+				margin-bottom: 2em;
+			}
+			
+			/* Better header styling on mobile */
+			#header {
+				padding: 2em 1em;
+			}
+			
+			#header .avatar {
+				margin-bottom: 1.5em;
+				width: 180px;
+				height: 180px;
+			}
+			
+			#header h1 {
+				font-size: 1.1em;
+				line-height: 1.7;
+				padding: 0 0.5em;
+			}
+			
+			/* Better icons on mobile */
+			#home .icons {
+				gap: 1em;
+				margin-top: 1.5em;
+				flex-wrap: wrap;
+			}
+			
+			#home .icons li {
+				margin: 0;
+			}
+			
+			/* Improve About section on mobile */
+			#about {
+				padding: 3em 1.5em;
+			}
+			
+			#about .row {
+				padding: 0;
+				gap: 2em;
+			}
+			
+			#about .column.text {
+				padding: 0;
+			}
+			
+			#about .column.text p {
+				font-size: 1em;
+				line-height: 1.7;
+				margin-bottom: 1.2em;
+			}
+			
+			#about .column.text p:first-child {
+				font-size: 1.1em;
+				padding: 1em;
+				margin-bottom: 1.5em;
+			}
+			
+			#about .column.image .image {
+				gap: 1em;
+			}
+			
+			#about .column.image img {
+				border-radius: 8px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+			}
+			
+			/* Better main content wrapper on mobile */
+			#main {
+				padding: 0 1em;
+			}
+			
+			/* Improve thumbnails on mobile */
+			.thumbnails {
+				margin: 0;
+				flex-direction: column;
+			}
+			
+			.thumbnails > div {
+				width: 100%;
+				padding: 0;
+				margin-bottom: 1.5em;
+			}
+			
+			.thumbnails a {
+				margin: 0;
+			}
+			
+			.thumbnails h3 {
+				font-size: 0.95em;
+				padding: 1em 0.8em;
+				line-height: 1.5;
+			}
+			
+			/* Improve projects section */
+			#projects {
+				padding: 3em 1.5em;
+			}
+			
+			#projects .thumbnails > div {
+				margin-bottom: 1.5em;
+			}
+			
+			/* Improve papers section */
+			#papers {
+				padding: 3em 1.5em;
+			}
+			
+			/* Improve videos section */
+			#videos {
+				padding: 3em 1.5em;
+			}
+			
+			.thumbnailsVids > div {
+				padding: 0;
+			}
+			
+			.thumbnailsVids a {
+				margin-bottom: 2em;
+			}
+			
+			/* Improve extra section */
+			#extra {
+				padding: 3em 1.5em;
+			}
+			
+			/* Improve contact section */
+			#contact {
+				padding: 3em 1.5em;
+			}
+			
+			#contact form {
+				padding: 1.5em;
+				margin: 0;
+			}
+			
+			#contact input[type="text"],
+			#contact input[type="email"],
+			#contact textarea {
+				padding: 0.9em;
+				font-size: 16px; /* Prevents zoom on iOS */
+			}
+			
+			#contact textarea {
+				height: 150px;
+			}
+			
+			#contact input[type="submit"] {
+				padding: 1em;
+				font-size: 1em;
+			}
+			
+			/* Better footer on mobile */
+			#footer {
+				padding: 2em 1.5em;
+				font-size: 0.9em;
+			}
+			
+			/* Improve hamburger menu styling */
+			.hamburger {
+				padding: 0.8em;
+				background-color: rgba(47, 42, 81, 0.9);
+				backdrop-filter: blur(10px);
+			}
+			
+			#logo {
+				height: 35px;
+				margin-left: 50px;
+			}
+			
+			/* Better nav menu on mobile */
+			nav.primary {
+				padding-top: 60px;
+			}
+			
+			nav.primary ul {
+				padding: 0;
+			}
+			
+			nav.primary a {
+				font-size: 1.5em;
+				padding: 0.8em 20px;
+				display: block;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				transition: all 0.3s ease;
+			}
+			
+			nav.primary a:hover {
+				background-color: rgba(255, 255, 255, 0.05);
+				padding-left: 30px;
+				color: #FF6382;
+			}
+			
+			nav.primary li:first-child a {
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+		}
+		
+		/* Smaller mobile devices */
+		@media screen and (max-width: 480px) {
+			.page-section {
+				padding: 2.5em 1em;
+			}
+			
+			#year {
+				font-size: 1.8em;
+				margin-bottom: 1.2em;
+			}
+			
+			#heading {
+				font-size: 1.7em;
+			}
+			
+			#header .avatar {
+				width: 150px;
+				height: 150px;
+			}
+			
+			#header h1 {
+				font-size: 1em;
+			}
+			
+			#about .column.text p {
+				font-size: 0.95em;
+			}
+			
+			#about .column.text p:first-child {
+				font-size: 1em;
+			}
+			
+			#contact form {
+				padding: 1.2em;
+			}
+			
+			.thumbnails h3 {
+				font-size: 0.9em;
+				padding: 0.9em 0.7em;
+			}
+			
+			#logo {
+				height: 30px;
+				margin-left: 45px;
+			}
+		}
+		
+		/* Improve touch targets on mobile */
+		@media (hover: none) and (pointer: coarse) {
+			.thumbnails a,
+			#home .icons li {
+				touch-action: manipulation;
+			}
+			
+			nav.primary a {
+				min-height: 48px;
+				display: flex;
+				align-items: center;
+			}
+		}
 	</style>
 
 	<body>
@@ -113,11 +720,10 @@
 			<ul>
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
-				<li><a href="#featured">Featured</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#papers">Papers</a></li>
 				<li><a href="#videos">Videos</a></li>
-				<li><a href="#extra">Extra</a></li>
+				<!-- <li><a href="#extra">Extra</a></li> -->
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -139,7 +745,6 @@
 				<ul>
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#featured">Featured</a></li>
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#papers">Papers</a></li>
 					<li><a href="#videos">Videos</a></li>
@@ -152,7 +757,7 @@
 			<section id="home" class="page-section">
 				<header id="header">
 					<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1>Welcome to <strong>Rocio Rueda's</strong> website! My name is Rocio Rueda. I am a third-year Computer Science student with an interest in data science, machine learning, and robotic process automation!</h1>
+					<h1>Welcome to <strong>Rocio Rueda's</strong> website! My name is Rocio Rueda. I am a fourth-year Computer Science student with an interest in data science, machine learning, and robotic process automation!</h1>
 					<ul class="icons">
 						<li><div class="icon style2"><a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/"><span ><i class="fab fa-linkedin"></i></span></a></div></li>
 						<li><div class="icon style2"><a href="https://github.com/rbrueda"><span ><i class="fab fa-github"></i></span></a></div></li>
@@ -162,74 +767,41 @@
 				</header>
 			</section>
 
-			<!-- Featured Works Section -->
-			<section id="featured" class="page-section">
-				<h1 id="heading"> <strong>Featured Works</strong></h1>
-				<section class="thumbnails">
-					<div>
-						<a href="https://github.com/gabrielrueda/win-hacks-2024">
-							<img src="images\best projects\3.png" alt="" />
-							<h3>SmartLot ~ Feb - Feb 2024</h3>
-						</a>
-					</div>
-					<div>
-						<a href="https://github.com/rbrueda/Services-Map">
-							<img src="images\best projects\2.png" alt="" />
-							<h3>Services Map ~ June - Sept 2023</h3>
-						</a>
-					</div>
-					<div> 
-						<a href="https://github.com/rbrueda/System-of-Style">
-							<img src="images\best projects\1.png" alt="" />
-							<h3>System of Style ~ April - June 2023</h3>
-						</a>
-					</div>
-				</section>
-			</section>
-
 			<!-- About Section -->
 			<section id="about" class="page-section">
 				<header id="header">
 					<h1 id="year"> <strong>About</strong></h1>
 				</header>
-				<section id="main">
-					<div class="row">
-						<!-- Column for the images (on left for larger screens) -->
-						<div class="column image">
-							<div class="image">
-								<br>
-								<img src="images/about/about1.jpg" width="361.5" height="513" alt="about-1" />
-								<br><br>
-								<img src="images/about/about2.jpg" width="361.5" height="513" alt="about-2" />
-								<br><br>
-								<img src="images/about/about3.jpg" width="361.5" height="513" alt="about-3" />
-								<br><br>
-								<img src="images/about/about4.jpg" width="361.5" height="419.80645" alt="about-4" />
-								<br><br>
-								<img src="images/about/about5.JPG" width="361.5" height="471.12647929" alt="about-5" />
-							</div>
-						</div>
-					
-						<!-- Column for the text (on right for larger screens) -->
-						<div class="column text">
-							<div class="text">
-								<p><font size="+3"><b><i>"Give your dreams all you've got, and you'll be amazed at the energy that comes out of you." <br />-William James</font></b> </i></p>
-					
-								<p><font size="+2"> Hi! My name is Rocio. I am 20 and I live in Windsor, Ontario, Canada. I am currently in my third year of Bachelor's of Computer Science Honours.</p>
-					
-								<p>I have developed an interest in problem-solving and technology at a young age. It all started at age of seven, when I created a movie that draws different scenes with the paint app. Then at the age of eight, I learned Ruby and created a game that involves moving a figure left to right trying to catch snowflakes from the sky. This was one of my first steps in the world of programming language in which I learned a little and felt accomplished with the creation.</p>
-					
-								<p>During my teenage years, I developed a deep interest in art. I found it very peaceful, while enjoying experimenting with different techniques to realize what worked out. At age sixteen, I started to learn digital art using the desktop app Krita. The more I learned about the various shortcuts using Krita, the more I preferred digital art over traditional. This also led me to enjoy other platforms such as Adobe Photoshop for editing my photos, Adobe Premiere Pro for video editing, and Sketchup for 3D modeling. This is the time I started to consider diving into the world of programming languages.</p>
-					
-								<p><b>I finally discovered my passion for programming at the age of seventeen.</b></p>
-					
-								<p>During my last year of high school, I learned some Python and Java with the help of YouTube videos. For my Grade 12 French final project, I was tasked to work on learning or creating something in four weeks. Since I was learning Python at the time, I thought I could make a game using Python. That's where I discovered Tech with Tim's video on creating a car racing game using Pygame. I learned a couple of things in the creation of that game. This included moving a car using the keyboard and how to create boundaries for a track. Although I was still a newbie, I decided to join the Bachelor of Computer Science Honours at the University of Windsor.</p>
-					
-								<p>I began my first year struggling a bit with the main programming concepts, since I did not have too much experience, though this made me work even harder. I have learned many fundamentals such as procedural and object-oriented programming, discrete mathematics, algorithms, and data structures. Currently, I am learning some fundamental concepts of AI, as well as Javascript and other programming languages.</p>
-							</div>
+				<div class="row">
+					<!-- Column for the images (on left for larger screens) -->
+					<div class="column image">
+						<div class="image">
+							<img src="images/about/about1.jpg" alt="about-1" />
+							<img src="images/about/about2.jpg" alt="about-2" />
+							<img src="images/about/about3.jpg" alt="about-3" />
+							<img src="images/about/about4.jpg" alt="about-4" />
 						</div>
 					</div>
-				</section>
+				
+					<!-- Column for the text (on right for larger screens) -->
+					<div class="column text">
+						<div class="text">
+							<p><strong><em>"Give your dreams all you've got, and you'll be amazed at the energy that comes out of you." <br />-William James</em></strong></p>
+				
+							<p><strong>Hi! My name is Rocio.</strong> I am 21 and I live in Windsor, Ontario, Canada. I am currently in my third year of Bachelor's of Computer Science Honours.</p>
+				
+							<p>I have developed an interest in problem-solving and technology at a young age. It all started at age of seven, when I created a movie that draws different scenes with the paint app. Then at the age of eight, I learned Ruby and created a game that involves moving a figure left to right trying to catch snowflakes from the sky. This was one of my first steps in the world of programming language in which I learned a little and felt accomplished with the creation.</p>
+				
+							<p>During my teenage years, I developed a deep interest in art. I found it very peaceful, while enjoying experimenting with different techniques to realize what worked out. At age sixteen, I started to learn digital art using the desktop app Krita. The more I learned about the various shortcuts using Krita, the more I preferred digital art over traditional. This also led me to enjoy other platforms such as Adobe Photoshop for editing my photos, Adobe Premiere Pro for video editing, and Sketchup for 3D modeling. This is the time I started to consider diving into the world of programming languages.</p>
+				
+							<p><b>I finally discovered my passion for programming at the age of seventeen.</b></p>
+				
+							<p>During my last year of high school, I learned some Python and Java with the help of YouTube videos. For my Grade 12 French final project, I was tasked to work on learning or creating something in four weeks. Since I was learning Python at the time, I thought I could make a game using Python. That's where I discovered Tech with Tim's video on creating a car racing game using Pygame. I learned a couple of things in the creation of that game. This included moving a car using the keyboard and how to create boundaries for a track. Although I was still a newbie, I decided to join the Bachelor of Computer Science Honours at the University of Windsor.</p>
+				
+							<p>I began my first year struggling a bit with the main programming concepts, since I did not have too much experience, though this made me work even harder. I have learned many fundamentals such as procedural and object-oriented programming, discrete mathematics, algorithms, and data structures. Currently, I am learning some fundamental concepts of AI, as well as Javascript and other programming languages.</p>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<!-- Projects Section -->
@@ -238,6 +810,7 @@
 					<h1 id="year"> <strong>Projects</strong></h1>
 				</header>
 				<section id="main">
+					<!-- Visible projects (first 6) -->
 					<section class="thumbnails">
 						<div>
 							<a href="https://github.com/rbrueda/Optimized-Frequent-Items-Algorithms">
@@ -280,56 +853,64 @@
 						</div>
 					</section>
 					
-					<section class="thumbnails">
-						<div>
-							<a href="https://github.com/jpanahon/SpaceApps2023">
-								<img src="images\projects\2.png" alt="" />
-								<h3>What's Up With This Water? ~ Oct - Oct 2023<br>- SpaceApps 2023 Hackathon Submission<br>- Full-stack application on a team of 6 using Python, Javascript, HTML, CSS, Django, and Streamlit</h3>
-							</a>
-						</div>
-						<div>
-							<a href="https://github.com/rbrueda/Services-Map">
-								<img src="images\projects\3.png" alt="" />
-								<h3>Services Map ~ June - Sept 2023<br>- Flask-based web app using HTML, CSS, JavaScript, and Python for users to advertise and search services</h3>
-							</a>
-						</div>
-						<div>
-							<a href="https://github.com/rbrueda/Random-Number-Guessing-Game">
-								<img src="images\projects\5.png" alt="" />
-								<h3>Number Guessing Game ~ Aug - Aug 2023<br>- Final project for COMP-2120 class using Java Swing</h3>
-							</a>
-						</div>
-					</section>
-					
-					<section class="thumbnails">
-						<div>
-							<a href="https://github.com/rbrueda/System-of-Style">
-								<img src="images\projects\4.png" alt="" />
-								<h3>System of Style ~ April - June 2023<br>- Square Developer Hackathon 2023<br>- Cross-platform hair salon booking system using C++, Qt, MariaDB, and Square API on a team of 2</h3>
-							</a>
-						</div>
-						<div>
-							<a href="https://github.com/rbrueda/Slot-Savory">
-								<img src="images\projects\6.jpg" alt="" />
-								<h3>Slot Savory ~ July 2021 - July 2023<br>- Cross-platform interative slot machine game using Tkinter and play_sounds library</h3>
-							</a>
-						</div>
-						<div>
-							<a href="https://github.com/rbrueda/Car-Racing-Game">
-								<img src="images\projects\7.jpg" alt="" />
-								<h3>Car Racing Game ~ Nov - Dec 2021<br>- Interactive two-dimensional game built using Pygame</h3>
-							</a>
-						</div>
-					</section>
+					<!-- Hidden projects (expandable) -->
+					<div id="more-projects" class="projects-expandable" style="display: none;">
+						<section class="thumbnails">
+							<div>
+								<a href="https://github.com/jpanahon/SpaceApps2023">
+									<img src="images\projects\2.png" alt="" />
+									<h3>What's Up With This Water? ~ Oct - Oct 2023<br>- SpaceApps 2023 Hackathon Submission<br>- Full-stack application on a team of 6 using Python, Javascript, HTML, CSS, Django, and Streamlit</h3>
+								</a>
+							</div>
+							<div>
+								<a href="https://github.com/rbrueda/Services-Map">
+									<img src="images\projects\3.png" alt="" />
+									<h3>Services Map ~ June - Sept 2023<br>- Flask-based web app using HTML, CSS, JavaScript, and Python for users to advertise and search services</h3>
+								</a>
+							</div>
+							<div>
+								<a href="https://github.com/rbrueda/Random-Number-Guessing-Game">
+									<img src="images\projects\5.png" alt="" />
+									<h3>Number Guessing Game ~ Aug - Aug 2023<br>- Final project for COMP-2120 class using Java Swing</h3>
+								</a>
+							</div>
+						</section>
+						
+						<section class="thumbnails">
+							<div>
+								<a href="https://github.com/rbrueda/System-of-Style">
+									<img src="images\projects\4.png" alt="" />
+									<h3>System of Style ~ April - June 2023<br>- Square Developer Hackathon 2023<br>- Cross-platform hair salon booking system using C++, Qt, MariaDB, and Square API on a team of 2</h3>
+								</a>
+							</div>
+							<div>
+								<a href="https://github.com/rbrueda/Slot-Savory">
+									<img src="images\projects\6.jpg" alt="" />
+									<h3>Slot Savory ~ July 2021 - July 2023<br>- Cross-platform interative slot machine game using Tkinter and play_sounds library</h3>
+								</a>
+							</div>
+							<div>
+								<a href="https://github.com/rbrueda/Car-Racing-Game">
+									<img src="images\projects\7.jpg" alt="" />
+									<h3>Car Racing Game ~ Nov - Dec 2021<br>- Interactive two-dimensional game built using Pygame</h3>
+								</a>
+							</div>
+						</section>
 
-					<section class="thumbnails">
-						<div>
-							<a href="https://github.com/rbrueda/Guns-And-Spaceships">
-								<img src="images\projects\8.gif" alt="" />
-								<h3>Guns and Spaceships ~ Oct - Oct 2021<br>- Two-player, two-dimensional game created using Pygame.</h3>
-							</a>
-						</div>
-					</section>
+						<section class="thumbnails">
+							<div>
+								<a href="https://github.com/rbrueda/Guns-And-Spaceships">
+									<img src="images\projects\8.gif" alt="" />
+									<h3>Guns and Spaceships ~ Oct - Oct 2021<br>- Two-player, two-dimensional game created using Pygame.</h3>
+								</a>
+							</div>
+						</section>
+					</div>
+					
+					<!-- View More/Less Button -->
+					<div style="text-align: center; margin-top: 2em;">
+						<button id="toggle-projects" class="view-more-btn" onclick="toggleProjects()">View More Projects</button>
+					</div>
 				</section>
 			</section>
 
@@ -339,6 +920,7 @@
 					<h1 id="year"><strong>Papers</strong></h1>
 				</header>
 				<section id="main">
+					<!-- Visible papers (first 4) -->
 					<section class="thumbnails">
 						<div>
 							<a href="https://drive.google.com/file/d/1b2FVJwlxKMFWin0sYZ4KC1XyNAYR9_IW/view?usp=sharing">
@@ -369,20 +951,28 @@
 						</div>
 					</section>
 					
-					<section class="thumbnails">
-						<div>
-							<a href="https://drive.google.com/file/d/1nBHOE1EHGeh0nXqFr1wudArzIHKw9HwB/view?usp=sharing">
-								<img src="images\papers\2.png" alt="" />
-								<h3>Web Application for City of Windsor Open Data Catalogue - Technical Article for COMP 3220</h3>
-							</a>
-						</div>
-						<div>
-							<a href="https://drive.google.com/file/d/1a3FsT9VPtBdAKFPKknp4ES7MaQVWv1lu/view?usp=sharing">
-								<img src="images\papers\3.png" alt="" />
-								<h3>Parallel Computer Architecture Design - Technical Article for COMP 2660</h3>
-							</a>
-						</div>
-					</section>
+					<!-- Hidden papers (expandable) -->
+					<div id="more-papers" class="papers-expandable" style="display: none;">
+						<section class="thumbnails">
+							<div>
+								<a href="https://drive.google.com/file/d/1nBHOE1EHGeh0nXqFr1wudArzIHKw9HwB/view?usp=sharing">
+									<img src="images\papers\2.png" alt="" />
+									<h3>Web Application for City of Windsor Open Data Catalogue - Technical Article for COMP 3220</h3>
+								</a>
+							</div>
+							<div>
+								<a href="https://drive.google.com/file/d/1a3FsT9VPtBdAKFPKknp4ES7MaQVWv1lu/view?usp=sharing">
+									<img src="images\papers\3.png" alt="" />
+									<h3>Parallel Computer Architecture Design - Technical Article for COMP 2660</h3>
+								</a>
+							</div>
+						</section>
+					</div>
+					
+					<!-- View More/Less Button -->
+					<div style="text-align: center; margin-top: 2em;">
+						<button id="toggle-papers" class="view-more-btn" onclick="togglePapers()">View More Papers</button>
+					</div>
 				</section>
 			</section>
 
@@ -392,6 +982,7 @@
 					<h1 id="year"> <strong>Videos</strong></h1>
 				</header>
 				<section id="main">
+					<!-- Visible videos (first 3) -->
 					<section class="thumbnailsVids">
 						<div>
 							<a href="https://www.youtube.com/watch?v=VAvU_nkWC7k">
@@ -414,48 +1005,60 @@
 								</div>
 								<h3>SMART Lot Demo Video</h3>
 							</a>
-
-							<a href="https://www.youtube.com/watch?v=hVtAAZ4c4fk">
-								<div class="videoWrapper">
-									<iframe src="https://www.youtube.com/embed/hVtAAZ4c4fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>
-								<h3>Service Map Demo Video</h3>
-							</a>
-									
-							<a href="https://www.youtube.com/watch?v=_InlFvOe7II">
-								<div class="videoWrapper">
-									<iframe src="https://www.youtube.com/embed/_InlFvOe7II" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>
-								<h3>Slot Savory Demo Video</h3>
-							</a>  
-
-							<a href="https://www.youtube.com/watch?v=FPqByF7G8IQ">
-								<div class="videoWrapper">
-									<iframe src="https://www.youtube.com/embed/FPqByF7G8IQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>
-								<h3>System Of Style Demo Video</h3>
-							</a>
-
-							<a href="https://www.youtube.com/watch?v=T684qK39pR4">
-								<div class="videoWrapper">
-									<iframe src="https://www.youtube.com/embed/T684qK39pR4" allowfullscreen></iframe>
-								</div>
-								<h3>Grade 12 French "Create Something" Final Project - Car Racing Game</h3>
-							</a> 
 						</div>
 					</section>
+					
+					<!-- Hidden videos (expandable) -->
+					<div id="more-videos" class="videos-expandable" style="display: none;">
+						<section class="thumbnailsVids">
+							<div>
+								<a href="https://www.youtube.com/watch?v=hVtAAZ4c4fk">
+									<div class="videoWrapper">
+										<iframe src="https://www.youtube.com/embed/hVtAAZ4c4fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+									<h3>Service Map Demo Video</h3>
+								</a>
+										
+								<a href="https://www.youtube.com/watch?v=_InlFvOe7II">
+									<div class="videoWrapper">
+										<iframe src="https://www.youtube.com/embed/_InlFvOe7II" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+									<h3>Slot Savory Demo Video</h3>
+								</a>  
+
+								<a href="https://www.youtube.com/watch?v=FPqByF7G8IQ">
+									<div class="videoWrapper">
+										<iframe src="https://www.youtube.com/embed/FPqByF7G8IQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+									<h3>System Of Style Demo Video</h3>
+								</a>
+
+								<a href="https://www.youtube.com/watch?v=T684qK39pR4">
+									<div class="videoWrapper">
+										<iframe src="https://www.youtube.com/embed/T684qK39pR4" allowfullscreen></iframe>
+									</div>
+									<h3>Grade 12 French "Create Something" Final Project - Car Racing Game</h3>
+								</a>
+							</div>
+						</section>
+					</div>
+					
+					<!-- View More/Less Button -->
+					<div style="text-align: center; margin-top: 2em;">
+						<button id="toggle-videos" class="view-more-btn" onclick="toggleVideos()">View More Videos</button>
+					</div>
 				</section>
 			</section>
 
 			<!-- Extra/Config Section -->
-			<section id="extra" class="page-section">
+			<!-- <section id="extra" class="page-section">
 				<header id="header">
 					<h1 id="year"> <strong>Extra</strong></h1>
 				</header>
 				<section id="main">
 					<section class="thumbnails">
 						<div>
-							<a href="config-page1.html">
+							<a href="./config-page1.html">
 								<img src="images\config\setup.png" alt="" />
 								<h3>My desktop setup!</h3>
 							</a>
@@ -468,7 +1071,7 @@
 						</div>
 					</section>
 				</section>
-			</section>
+			</section> -->
 
 			<!-- Contact Section -->
 			<section id="contact" class="page-section">
@@ -545,6 +1148,60 @@
 					}
 				});
 			});
+			
+			// Toggle Projects visibility
+			function toggleProjects() {
+				const moreProjects = document.getElementById('more-projects');
+				const toggleBtn = document.getElementById('toggle-projects');
+				
+				if (moreProjects.style.display === 'none') {
+					moreProjects.style.display = 'block';
+					toggleBtn.textContent = 'Show Less Projects';
+					// Smooth scroll to button position after expansion
+					setTimeout(() => {
+						toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+					}, 300);
+				} else {
+					moreProjects.style.display = 'none';
+					toggleBtn.textContent = 'View More Projects';
+				}
+			}
+			
+			// Toggle Papers visibility
+			function togglePapers() {
+				const morePapers = document.getElementById('more-papers');
+				const toggleBtn = document.getElementById('toggle-papers');
+				
+				if (morePapers.style.display === 'none') {
+					morePapers.style.display = 'block';
+					toggleBtn.textContent = 'Show Less Papers';
+					// Smooth scroll to button position after expansion
+					setTimeout(() => {
+						toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+					}, 300);
+				} else {
+					morePapers.style.display = 'none';
+					toggleBtn.textContent = 'View More Papers';
+				}
+			}
+			
+			// Toggle Videos visibility
+			function toggleVideos() {
+				const moreVideos = document.getElementById('more-videos');
+				const toggleBtn = document.getElementById('toggle-videos');
+				
+				if (moreVideos.style.display === 'none') {
+					moreVideos.style.display = 'block';
+					toggleBtn.textContent = 'Show Less Videos';
+					// Smooth scroll to button position after expansion
+					setTimeout(() => {
+						toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+					}, 300);
+				} else {
+					moreVideos.style.display = 'none';
+					toggleBtn.textContent = 'View More Videos';
+				}
+			}
 		</script>
 
 	</body>
