@@ -2862,8 +2862,26 @@ nav.primary li {
 
 	margin: 0 0 2em 0;
 	padding: 0.5em;
-		
 }
+
+/* Hide hamburger menu on desktop */
+@media screen and (min-width: 769px) {
+	.hamburger {
+		display: none;
+	}
+	
+	nav.primary {
+		display: none;
+	}
+}
+
+/* Show hamburger menu on mobile/tablet */
+@media screen and (max-width: 768px) {
+	.desktop-nav {
+		display: none !important;
+	}
+}
+
 nav.primary a{
    
 	margin-left:20px;

@@ -13,106 +13,539 @@
 		<link href="assets/css/hamburgers.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/4c4d3c7d2b.js"></script>
 		<link rel="shortcut icon" href="images\SmallLogo.ico" type="image/x-icon"/>
-
 	</head>
 
 	<style>
 		/* CSS for custom spacing */
 		.line-container {
-			line-height: 0.75; /* Adjust as needed */
+			line-height: 0.75;
 		}
 		#heading {
-			text-align: center; /* Center the text */
-			font-size: 45px; /* Make the font size smaller */
+			text-align: center;
+			font-size: 45px;
 		}
-	  </style>
-
-	  
-
+		
+		/* Modern Desktop Navigation */
+		.desktop-nav {
+			display: none;
+		}
+		
+		@media screen and (min-width: 769px) {
+			.desktop-nav {
+				display: flex;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				background-color: rgba(47, 42, 81, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 1000;
+				padding: 1em 2em;
+				justify-content: space-between;
+				align-items: center;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+			}
+			
+			.desktop-nav .logo {
+				height: 40px;
+				width: auto;
+			}
+			
+			.desktop-nav ul {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 2em;
+			}
+			
+			.desktop-nav ul li a {
+				color: rgba(255, 255, 255, 0.9);
+				text-decoration: none;
+				font-size: 1em;
+				transition: color 0.3s ease;
+				padding: 0.5em 1em;
+			}
+			
+			.desktop-nav ul li a:hover {
+				color: #FF6382;
+			}
+			
+			/* Hide hamburger on desktop */
+			.hamburger {
+				display: none;
+			}
+			
+			/* Add padding to body for fixed nav */
+			body {
+				padding-top: 70px;
+			}
+		}
+		
+		/* Section spacing for single page */
+		.page-section {
+			min-height: 100vh;
+			padding: 4em 0;
+		}
+		
+		.page-section:first-of-type {
+			padding-top: 2em;
+		}
+		
+		@media screen and (min-width: 769px) {
+			.page-section:first-of-type {
+				padding-top: 4em;
+			}
+		}
+		
+		/* Smooth scrolling */
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
 
 	<body>
 
+		<!-- Desktop Navigation (only visible on desktop/laptop) -->
+		<nav class="desktop-nav">
+			<img src="images\LongLogo.png" class="logo" alt="Logo" />
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#featured">Featured</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#papers">Papers</a></li>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#extra">Extra</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Hamburger Menu -->
-				<input type="checkbox" id="menuToggle"/>
-				<div class="hamburger">
-					<label for="menuToggle" class="menuON" >
-						<span class="menuB"></span>
-						<span class="menuB"></span>
-						<span class="menuB"></span>
-					</label>
-					<img src="images\LongLogo.png" id="logo"></img>
-				</div>
-				<nav class="primary">
-					<ul>
-						<li><a style="font-size:35px;" href="index.html"></a></li>
-						<li><a href="./">Home</a></li>
-						<li><a href="./about">About</a></li>
-						<li><a href="./contact">Contact</a></li>
-						<li><a href="./config">Extra</a></li>
-						<li><a href="./papers">Papers</a></li>
-						<li><a href="./projects">Projects</a></li>
-						<li><a href="./videos">Videos</a></li>
-						</ul>
-					  </nav>
-
-				<!-- Header -->
-					<header id="header">
-						<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-						<h1>Welcome to <strong>Rocio Rueda’s </strong> website! My name is Rocio Rueda. I am a third-year Computer Science student with an interest in data science, machine learning, and robotic process automation!</h1>
-						<ul class="icons">
-						
-							<li><div class="icon style2"><a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/"><span ><i class="fab fa-linkedin"></i></span></a></div></li>
-							<li><div class="icon style2"><a href="https://github.com/rbrueda"><span ><i class="fab fa-github"></i></span></a></div></li>
-							<li><div class="icon style2"><a href = "https://devpost.com/rbrueda?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><span ><div class="line-container"><br><img src="images\devpost.svg" width="25" height="25" alt="SVG Image"></span></a></div></div></li>
-							<li><div class="icon style2"><a href = "mailto:rbrueda8@gmail.com"><span ><i class="fas fa-envelope"></i></span></a></div></li>
-						</ul>
-					</header>
-
-				<!-- Main -->
-					<section id="main">
-
-							<h1 id="heading"> <strong>Featured Works</strong></h1>
-
-						<!-- Thumbnails -->
-							<section class="thumbnails">
-									<div>
-											<a href="https://github.com/gabrielrueda/win-hacks-2024">
-												<img src="images\best projects\3.png" alt="" />
-												<h3>SmartLot ~ Feb - Feb 2024</h3>
-											</a>
-										</div>
-										<div>
-											<a href="https://github.com/rbrueda/Services-Map">
-												<img src="images\best projects\2.png" alt="" />
-												<h3>Services Map ~ June - Sept 2023</h3>
-											</a>
-										</div>
-										<div> 
-											<a href="https://github.com/rbrueda/System-of-Style">
-												<img src="images\best projects\1.png" alt="" />
-												<h3>System of Style ~ April - June 2023</h3>
-											</a>
-											
-										</div>
-										
-							</section>
-							
-							</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p>&copy; 2024 Rocio Rueda. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Template used under license. All rights to the template are owned by <a href="http://templated.co">TEMPLATED</a> and are used under the terms of the <a href="LICENSE.txt">license</a> agreement. </p>
-					</footer>
-					
+			<!-- Hamburger Menu (only visible on mobile) -->
+			<input type="checkbox" id="menuToggle"/>
+			<div class="hamburger">
+				<label for="menuToggle" class="menuON" >
+					<span class="menuB"></span>
+					<span class="menuB"></span>
+					<span class="menuB"></span>
+				</label>
+				<img src="images\LongLogo.png" id="logo" alt="Logo"></img>
 			</div>
+			<nav class="primary">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#featured">Featured</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#papers">Papers</a></li>
+					<li><a href="#videos">Videos</a></li>
+					<li><a href="#extra">Extra</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Home/Hero Section -->
+			<section id="home" class="page-section">
+				<header id="header">
+					<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1>Welcome to <strong>Rocio Rueda's</strong> website! My name is Rocio Rueda. I am a third-year Computer Science student with an interest in data science, machine learning, and robotic process automation!</h1>
+					<ul class="icons">
+						<li><div class="icon style2"><a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/"><span ><i class="fab fa-linkedin"></i></span></a></div></li>
+						<li><div class="icon style2"><a href="https://github.com/rbrueda"><span ><i class="fab fa-github"></i></span></a></div></li>
+						<li><div class="icon style2"><a href = "https://devpost.com/rbrueda?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><span ><div class="line-container"><br><img src="images\devpost.svg" width="25" height="25" alt="SVG Image"></span></a></div></div></li>
+						<li><div class="icon style2"><a href = "mailto:rbrueda8@gmail.com"><span ><i class="fas fa-envelope"></i></span></a></div></li>
+					</ul>
+				</header>
+			</section>
+
+			<!-- Featured Works Section -->
+			<section id="featured" class="page-section">
+				<h1 id="heading"> <strong>Featured Works</strong></h1>
+				<section class="thumbnails">
+					<div>
+						<a href="https://github.com/gabrielrueda/win-hacks-2024">
+							<img src="images\best projects\3.png" alt="" />
+							<h3>SmartLot ~ Feb - Feb 2024</h3>
+						</a>
+					</div>
+					<div>
+						<a href="https://github.com/rbrueda/Services-Map">
+							<img src="images\best projects\2.png" alt="" />
+							<h3>Services Map ~ June - Sept 2023</h3>
+						</a>
+					</div>
+					<div> 
+						<a href="https://github.com/rbrueda/System-of-Style">
+							<img src="images\best projects\1.png" alt="" />
+							<h3>System of Style ~ April - June 2023</h3>
+						</a>
+					</div>
+				</section>
+			</section>
+
+			<!-- About Section -->
+			<section id="about" class="page-section">
+				<header id="header">
+					<h1 id="year"> <strong>About</strong></h1>
+				</header>
+				<section id="main">
+					<div class="row">
+						<!-- Column for the images (on left for larger screens) -->
+						<div class="column image">
+							<div class="image">
+								<br>
+								<img src="images/about/about1.jpg" width="361.5" height="513" alt="about-1" />
+								<br><br>
+								<img src="images/about/about2.jpg" width="361.5" height="513" alt="about-2" />
+								<br><br>
+								<img src="images/about/about3.jpg" width="361.5" height="513" alt="about-3" />
+								<br><br>
+								<img src="images/about/about4.jpg" width="361.5" height="419.80645" alt="about-4" />
+								<br><br>
+								<img src="images/about/about5.JPG" width="361.5" height="471.12647929" alt="about-5" />
+							</div>
+						</div>
+					
+						<!-- Column for the text (on right for larger screens) -->
+						<div class="column text">
+							<div class="text">
+								<p><font size="+3"><b><i>"Give your dreams all you've got, and you'll be amazed at the energy that comes out of you." <br />-William James</font></b> </i></p>
+					
+								<p><font size="+2"> Hi! My name is Rocio. I am 20 and I live in Windsor, Ontario, Canada. I am currently in my third year of Bachelor's of Computer Science Honours.</p>
+					
+								<p>I have developed an interest in problem-solving and technology at a young age. It all started at age of seven, when I created a movie that draws different scenes with the paint app. Then at the age of eight, I learned Ruby and created a game that involves moving a figure left to right trying to catch snowflakes from the sky. This was one of my first steps in the world of programming language in which I learned a little and felt accomplished with the creation.</p>
+					
+								<p>During my teenage years, I developed a deep interest in art. I found it very peaceful, while enjoying experimenting with different techniques to realize what worked out. At age sixteen, I started to learn digital art using the desktop app Krita. The more I learned about the various shortcuts using Krita, the more I preferred digital art over traditional. This also led me to enjoy other platforms such as Adobe Photoshop for editing my photos, Adobe Premiere Pro for video editing, and Sketchup for 3D modeling. This is the time I started to consider diving into the world of programming languages.</p>
+					
+								<p><b>I finally discovered my passion for programming at the age of seventeen.</b></p>
+					
+								<p>During my last year of high school, I learned some Python and Java with the help of YouTube videos. For my Grade 12 French final project, I was tasked to work on learning or creating something in four weeks. Since I was learning Python at the time, I thought I could make a game using Python. That's where I discovered Tech with Tim's video on creating a car racing game using Pygame. I learned a couple of things in the creation of that game. This included moving a car using the keyboard and how to create boundaries for a track. Although I was still a newbie, I decided to join the Bachelor of Computer Science Honours at the University of Windsor.</p>
+					
+								<p>I began my first year struggling a bit with the main programming concepts, since I did not have too much experience, though this made me work even harder. I have learned many fundamentals such as procedural and object-oriented programming, discrete mathematics, algorithms, and data structures. Currently, I am learning some fundamental concepts of AI, as well as Javascript and other programming languages.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- Projects Section -->
+			<section id="projects" class="page-section">
+				<header id="header">
+					<h1 id="year"> <strong>Projects</strong></h1>
+				</header>
+				<section id="main">
+					<section class="thumbnails">
+						<div>
+							<a href="https://github.com/rbrueda/Optimized-Frequent-Items-Algorithms">
+								<img src="images\projects\13.png" alt="" />
+								<h3>Optimized Frequent Itemset Algorithms ~ Mar - Mar 2025<br>- Optimized Apriori and PCY algorithms ran on MovieLens 100K dataset</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Disaster-Tweets">
+								<img src="images\projects\12.png" alt="" />
+								<h3>Disaster Tweets ~ Jan - Mar 2025<br>- Efficient deep learning model for disaster tweet classification with TensorFlow</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Light-Lumificient">
+								<img src="images\projects\11.png" alt="" />
+								<h3>Light Lumificient ~ Feb - Mar 2024<br>- A multi-agent smart home simulator, developed by a team of 4, that produces energy-efficient results using SciPy, Tkinter, PySwip, and Matplotlib</h3>
+							</a>
+						</div>
+					</section>
+
+					<section class="thumbnails">
+						<div>
+							<a href="https://github.com/zayatMark/3220-group-project">
+								<img src="images\projects\10.png" alt="" />
+								<h3>Open Data Catalogue ~ Mar - Mar 2024<br>- Web portal for viewing Windsor open data sets built using React.js</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/gabrielrueda/win-hacks-2024">
+								<img src="images\projects\9.png" alt="" />
+								<h3>Smart Lot ~ Feb - Feb 2024<br>- WinHacks 2024 Hackathon Submission<br>- Captured live camera views and real-life model of parking lots using OpenCV, Arduino, MariaDB, and Streamlit</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Sentiment-Analysis">
+								<img src="images\projects\1.png" alt="" />
+								<h3>Sentiment Analysis ~ Sept 2024 - April 2025<br>- Research-based project using Reddit API, IBM NLP API, and Pandas for analyizing sentiments</h3>
+							</a>
+						</div>
+					</section>
+					
+					<section class="thumbnails">
+						<div>
+							<a href="https://github.com/jpanahon/SpaceApps2023">
+								<img src="images\projects\2.png" alt="" />
+								<h3>What's Up With This Water? ~ Oct - Oct 2023<br>- SpaceApps 2023 Hackathon Submission<br>- Full-stack application on a team of 6 using Python, Javascript, HTML, CSS, Django, and Streamlit</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Services-Map">
+								<img src="images\projects\3.png" alt="" />
+								<h3>Services Map ~ June - Sept 2023<br>- Flask-based web app using HTML, CSS, JavaScript, and Python for users to advertise and search services</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Random-Number-Guessing-Game">
+								<img src="images\projects\5.png" alt="" />
+								<h3>Number Guessing Game ~ Aug - Aug 2023<br>- Final project for COMP-2120 class using Java Swing</h3>
+							</a>
+						</div>
+					</section>
+					
+					<section class="thumbnails">
+						<div>
+							<a href="https://github.com/rbrueda/System-of-Style">
+								<img src="images\projects\4.png" alt="" />
+								<h3>System of Style ~ April - June 2023<br>- Square Developer Hackathon 2023<br>- Cross-platform hair salon booking system using C++, Qt, MariaDB, and Square API on a team of 2</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Slot-Savory">
+								<img src="images\projects\6.jpg" alt="" />
+								<h3>Slot Savory ~ July 2021 - July 2023<br>- Cross-platform interative slot machine game using Tkinter and play_sounds library</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/rbrueda/Car-Racing-Game">
+								<img src="images\projects\7.jpg" alt="" />
+								<h3>Car Racing Game ~ Nov - Dec 2021<br>- Interactive two-dimensional game built using Pygame</h3>
+							</a>
+						</div>
+					</section>
+
+					<section class="thumbnails">
+						<div>
+							<a href="https://github.com/rbrueda/Guns-And-Spaceships">
+								<img src="images\projects\8.gif" alt="" />
+								<h3>Guns and Spaceships ~ Oct - Oct 2021<br>- Two-player, two-dimensional game created using Pygame.</h3>
+							</a>
+						</div>
+					</section>
+				</section>
+			</section>
+
+			<!-- Papers Section -->
+			<section id="papers" class="page-section">
+				<header id="header">
+					<h1 id="year"><strong>Papers</strong></h1>
+				</header>
+				<section id="main">
+					<section class="thumbnails">
+						<div>
+							<a href="https://drive.google.com/file/d/1b2FVJwlxKMFWin0sYZ4KC1XyNAYR9_IW/view?usp=sharing">
+								<img src="images\papers\6.jpg" alt="" />
+								<h3>Generative AI Sentiment Analysis using Reddit API - Undergraduate Research Project</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://drive.google.com/file/d/1-zgfWLsUIquqNLphjEXlsvUKgrG_ZN7u/view?usp=sharing">
+								<img src="images\papers\5.jpg" alt="" />
+								<h3>Optimized Apriori and PCY Algorithms - Research Paper for COMP 4250</h3>
+							</a>
+						</div>
+					</section>
+					
+					<section class="thumbnails">
+						<div>
+							<a href="https://drive.google.com/file/d/11BR-lSOaI388ehZN8wHtaO0kDUyqG1NU/view?usp=sharing">
+								<img src="images\papers\4.jpg" alt="" />
+								<h3>Analysis of Deep Learning Model for Disaster Tweet Classification Speed Optimization - Research Paper for COMP 4740</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://drive.google.com/file/d/17rS3E_lTol5x54aTG_l7Y3O9ZAQxqoVM/view?usp=sharing">
+								<img src="images\papers\1.png" alt="" />
+								<h3>Energy Efficient ABMS for Smart Home - Research Paper for COMP 3710</h3>
+							</a>
+						</div>
+					</section>
+					
+					<section class="thumbnails">
+						<div>
+							<a href="https://drive.google.com/file/d/1nBHOE1EHGeh0nXqFr1wudArzIHKw9HwB/view?usp=sharing">
+								<img src="images\papers\2.png" alt="" />
+								<h3>Web Application for City of Windsor Open Data Catalogue - Technical Article for COMP 3220</h3>
+							</a>
+						</div>
+						<div>
+							<a href="https://drive.google.com/file/d/1a3FsT9VPtBdAKFPKknp4ES7MaQVWv1lu/view?usp=sharing">
+								<img src="images\papers\3.png" alt="" />
+								<h3>Parallel Computer Architecture Design - Technical Article for COMP 2660</h3>
+							</a>
+						</div>
+					</section>
+				</section>
+			</section>
+
+			<!-- Videos Section -->
+			<section id="videos" class="page-section">
+				<header id="header">
+					<h1 id="year"> <strong>Videos</strong></h1>
+				</header>
+				<section id="main">
+					<section class="thumbnailsVids">
+						<div>
+							<a href="https://www.youtube.com/watch?v=VAvU_nkWC7k">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/VAvU_nkWC7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>Light Lumificient Final Project Video</h3>
+							</a>
+
+							<a href="https://www.youtube.com/watch?v=2JY9l_ED2a4&t=1s">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/2JY9l_ED2a4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>Windsor Data Portal Demo Video</h3>
+							</a>
+
+							<a href="https://www.youtube.com/watch?v=vlWlhAm0BZU">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/vlWlhAm0BZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>SMART Lot Demo Video</h3>
+							</a>
+
+							<a href="https://www.youtube.com/watch?v=hVtAAZ4c4fk">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/hVtAAZ4c4fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>Service Map Demo Video</h3>
+							</a>
+									
+							<a href="https://www.youtube.com/watch?v=_InlFvOe7II">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/_InlFvOe7II" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>Slot Savory Demo Video</h3>
+							</a>  
+
+							<a href="https://www.youtube.com/watch?v=FPqByF7G8IQ">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/FPqByF7G8IQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<h3>System Of Style Demo Video</h3>
+							</a>
+
+							<a href="https://www.youtube.com/watch?v=T684qK39pR4">
+								<div class="videoWrapper">
+									<iframe src="https://www.youtube.com/embed/T684qK39pR4" allowfullscreen></iframe>
+								</div>
+								<h3>Grade 12 French "Create Something" Final Project - Car Racing Game</h3>
+							</a> 
+						</div>
+					</section>
+				</section>
+			</section>
+
+			<!-- Extra/Config Section -->
+			<section id="extra" class="page-section">
+				<header id="header">
+					<h1 id="year"> <strong>Extra</strong></h1>
+				</header>
+				<section id="main">
+					<section class="thumbnails">
+						<div>
+							<a href="config-page1.html">
+								<img src="images\config\setup.png" alt="" />
+								<h3>My desktop setup!</h3>
+							</a>
+						</div>
+						<div>
+							<a href="config-page2.html">
+								<img src="images\config\vs-code-setup.png" alt="" />
+								<h3>My Visual Studio Code Setup!</h3>
+							</a>
+						</div>
+					</section>
+				</section>
+			</section>
+
+			<!-- Contact Section -->
+			<section id="contact" class="page-section">
+				<header id="header">
+					<h1 id="year"> <strong>Contact</strong></h1>
+				</header>
+				<div>
+					<form id="emailForm" action="mailto:rbrueda8@gmail.com" method="post" enctype="text/plain">
+						<font size=+1>
+							<label for="fname">First Name</label>
+							<input type="text" id="fname" name="firstname" placeholder="Your name..">
+							
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+							
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" placeholder="Your email..">
+							
+							<label for="subject">Subject</label>
+							<input type="text" id="subject" name="subject" placeholder="Subject of the email..">
+							
+							<label for="message">Message</label>
+							<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+							
+							<input type="submit" value="Submit" onclick="updateMailto()">
+						</font>
+					</form>
+				</div>
+				
+				<script>
+					function updateMailto() {
+						var firstName = document.getElementById("fname").value;
+						var lastName = document.getElementById("lname").value;
+						var message = document.getElementById("message").value;
+						var subject = document.getElementById("subject").value;
+				
+						// Construct the body of the email
+						var body = "From: " + firstName + " " + lastName + "\n\n";
+						body += "Message:\n" + message;
+				
+						// Set the mailto link with the subject and body
+						var mailtoLink = "mailto:rbrueda8@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+				
+						// Open the mailto link
+						window.location.href = mailtoLink;
+					}
+				</script>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p>&copy; 2024 Rocio Rueda. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Template used under license. All rights to the template are owned by <a href="http://templated.co">TEMPLATED</a> and are used under the terms of the <a href="LICENSE.txt">license</a> agreement. </p>
+			</footer>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		
+		<!-- Smooth scrolling for anchor links -->
+		<script>
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+						// Close mobile menu if open
+						document.getElementById('menuToggle').checked = false;
+					}
+				});
+			});
+		</script>
 
 	</body>
 </html>
