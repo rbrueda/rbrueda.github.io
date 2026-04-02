@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import "../assets/css/tailwind.css";
 import "../assets/css/main.css";
+import devpostIcon from "../assets/images/devpost.svg";
 ---
 <!DOCTYPE HTML>
 <html lang="en">
@@ -140,10 +141,9 @@ import "../assets/css/main.css";
 								max-[736px]:p-5">
 						<span
 							aria-hidden="true"
+							style={`-webkit-mask-image: url('${devpostIcon.src}'); mask-image: url('${devpostIcon.src}');`}
 							class="absolute top-1/2 left-1/2 h-[20px] w-[20px] bg-white
 								-translate-x-1/2 -translate-y-1/2
-								[-webkit-mask-image:url('/images/devpost.svg')]
-								[mask-image:url('/images/devpost.svg')]
 								[-webkit-mask-repeat:no-repeat]
 								[mask-repeat:no-repeat]
 								[-webkit-mask-position:center]
