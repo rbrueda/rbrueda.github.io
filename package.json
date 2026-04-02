@@ -1,0 +1,34 @@
+{
+  "name": "rbrueda.github.io",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "email.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npm exec -- @tailwindcss/cli --input ./src/assets/css/input.css --output ./src/assets/css/tailwind.css",
+    "watch:css": "npm exec -- @tailwindcss/cli --input ./src/assets/css/input.css --output ./src/assets/css/tailwind.css --watch",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbrueda/rbrueda.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbrueda/rbrueda.github.io/issues"
+  },
+  "homepage": "https://github.com/rbrueda/rbrueda.github.io#readme",
+  "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.5.10",
+    "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.0",
+    "flowbite": "^4.0.1",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.1"
+  }
+}

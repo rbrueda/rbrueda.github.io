@@ -1,0 +1,13 @@
+index-old.html
+node_modules/
+
+# Astro / build outputs
+.astro/
+dist/
+
+# Optional local env
+.venv
+.env.*
+
+# OS/editor noise
+.DS_Store
