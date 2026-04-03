@@ -4,6 +4,11 @@ import "../assets/css/tailwind.css";
 import "../assets/css/main.css";
 import devpostIcon from "../assets/images/devpost.svg";
 ---
+<!-- todo: fix mobile bug file explorer header -->
+<!-- todo: fix mobile bug arrow down button cut off (remove the -, +, x in mobile)-->
+<!-- todo: fix mobile bug e cut off in experience in mobile (change size for headers in smaller mobile screens -- or just change headers for mobile screens in general) -->
+ <!-- todo: make left, right, and bottom banner thinner for mobile screen -->
+  <!-- todo: change border if screen is still small horizontal (width wide but height small) -> change the border so it is is as thin as vertical mobile -->
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -226,8 +231,8 @@ import devpostIcon from "../assets/images/devpost.svg";
 							<Image 
 								src={import("../assets/images/about/about.jpg")} 
 								alt="About" 
-								width={1008} 
-								height={1050} 
+								width={3024} 
+								height={3365} 
 								format="webp" 
 								loading="lazy" 
 								class="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transition-transform duration-500 hover:scale-125 cursor-zoom-in" 
@@ -235,7 +240,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 						</div>
 						<!-- Photo Footer content -->
 						<div class="h-10 flex items-center justify-between px-4 border-t border-white/5 text-white/50 text-[11px] select-none">
-							<div>3,024 × 3,150 &nbsp;|&nbsp; 1.7 MB</div>
+							<div>3,024 × 3,365 &nbsp;|&nbsp; 1.9 MB</div>
 							<div class="flex items-center gap-3">
 								<span class="hidden sm:inline-block">50%</span>
 								<!-- Fake zoom in feature -->
