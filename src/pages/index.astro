@@ -85,100 +85,96 @@ import devpostIcon from "../assets/images/devpost.svg";
         </nav>
         
 		<!-- main tag that ensures consistent padding across the web page -->
-        <main class="pt-24 pb-20 px-12 md:px-24 w-full min-h-screen">
+        <main class="w-full min-h-screen pt-12 pb-6 px-6 md:pb-8 md:px-8 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16">
 			<!-- Home/Hero Section -->
-			<section id="home" class="min-h-[85vh] flex flex-col items-center pt-28 px-4 fade-content visible">
+			<section id="home" class="relative min-h-[85vh] lg:min-h-[calc(100vh-10rem)] flex flex-col items-center py-8 fade-content visible">
 				<!-- Avatar container -->
-				<div class="relative w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border border-white/50 overflow-hidden mb-6 
-					shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
-					transition-all duration-500 ease-in-out
-					hover:-translate-y-3 animate-fade-up">
-					<Image
-						src={import("../assets/images/avatar.jpg")}
-						alt="Rocio Rueda"
-						width={640}  
-						height={640} 
-						format="webp"
-						class="object-cover w-full h-full"
-					/>
-				</div>
-				<!-- Info and pitch text -->
-				<div class="flex flex-col gap-2 transition-all duration-500 ease-in-out hover:-translate-y-2 animate-fade-up delay-100">
-					<h1 class="text-4xl font-bold text-center text-white">Rocio Rueda</h1>
-					<h3 class="text-xl md:text-2xl font-bold text-center text-white bg-black/20 p-2 rounded-xl">Software and ML Enthusiast</h3>
-					<h3 class="relative flex items-center justify-center text-lg md:text-xl font-bold text-white bg-black/30 overflow-hidden rounded-xl">
-						<span class="py-2 px-12">BSc Computer Science Student</span>
-						<div class="absolute right-0 top-0 bottom-0 w-12 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors">
-							<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
-						</div>
-					</h3>
-				</div>
-				<!-- Social media buttons -->
-				<ul class="flex justify-center pt-6 gap-4 animate-fade-up delay-200">
-					<!-- LinkedIn -->
-					<li>
-						<a
-						href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" aria-label="LinkedIn Profile"
-						class="relative block rounded-full border border-white/25 bg-white/10 p-6
-								transition-all duration-200 ease-in-out hover:bg-white/25
-								max-[736px]:p-5">
-						<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[20px] text-white -translate-x-1/2 -translate-y-1/2 max-[736px]:text-[16px]" aria-hidden="true"></i>
-						</a>
-					</li>
-					<!-- GitHub -->
-					<li>
-						<a
-						href="https://github.com/rbrueda" aria-label="GitHub Profile"
-						class="relative block rounded-full border border-white/25 bg-white/10 p-6
-								transition-all duration-200 ease-in-out hover:bg-white/25
-								max-[736px]:p-5">
-						<i class="fab fa-github absolute top-1/2 left-1/2 text-[20px] text-white -translate-x-1/2 -translate-y-1/2 max-[736px]:text-[16px]" aria-hidden="true"></i>
-						</a>
-					</li>
+				<div class="flex flex-col items-center justify-center flex-1 w-full max-w-2xl px-2 mt-8 lg:mt-0">
+					
+					<div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full border border-white/50 overflow-hidden mb-6 
+						shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
+						transition-all duration-500 ease-in-out
+						hover:-translate-y-3 animate-fade-up shrink-0">
+						<Image
+							src={import("../assets/images/avatar.jpg")}
+							alt="Rocio Rueda"
+							width={640}  
+							height={640} 
+							format="webp"
+							class="object-cover w-full h-full"
+						/>
+					</div>
+					<!-- Info and pitch text -->
+					<!-- Content wrapped relative to text width size -->
+					<div class="flex flex-col items-center gap-2 sm:gap-3 transition-all duration-500 ease-in-out hover:-translate-y-2 animate-fade-up delay-100 w-full text-center">
+						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Rocio Rueda</h1>
 
-					<!-- Devpost -->
-					<!-- since devpost does not have built-in Font Awesome class, this approach allows it to behave like one -->
-					<li>
-						<a
-						href="https://devpost.com/rbrueda"
-						class="relative block rounded-full border border-white/25 bg-white/10 p-6
-								transition-all duration-200 ease-in-out hover:bg-white/25
-								max-[736px]:p-5">
-						<span
-							aria-hidden="true"
-							style={`-webkit-mask-image: url('${devpostIcon.src}'); mask-image: url('${devpostIcon.src}');`}
-							class="absolute top-1/2 left-1/2 h-[20px] w-[20px] bg-white
-								-translate-x-1/2 -translate-y-1/2
-								[-webkit-mask-repeat:no-repeat]
-								[mask-repeat:no-repeat]
-								[-webkit-mask-position:center]
-								[mask-position:center]
-								[-webkit-mask-size:contain]
-								[mask-size:contain]
-								max-[736px]:h-[16px] max-[736px]:w-[16px]"
-						></span>
-						<span class="sr-only">Devpost</span>
-						</a>
-					</li>
-					<!-- Email -->
-					<li>
-						<a
-						href="mailto:rbrueda8@gmail.com" aria-label="Send an Email"
-						class="relative block rounded-full border border-white/25 bg-white/10 p-6
-								transition-all duration-200 ease-in-out hover:bg-white/25
-								max-[736px]:p-5">
-						<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[20px] text-white -translate-x-1/2 -translate-y-1/2 max-[736px]:text-[16px]" aria-hidden="true"></i>
-						</a>
-					</li>
-				</ul>
-			
+						<h3 class="text-base sm:text-xl lg:text-2xl font-bold text-white bg-black/20 py-2 px-6 rounded-xl">
+							Software and ML Enthusiast
+						</h3>
+						
+						<h3 class="relative inline-flex items-center justify-center text-sm sm:text-lg lg:text-xl font-bold text-white bg-black/30 overflow-hidden rounded-xl">
+							<span class="py-2 pl-5 sm:pl-8 md:pl-10 pr-12 sm:pr-16 text-center">BSc Computer Science Student</span>
+							
+							<div class="absolute right-0 top-0 bottom-0 w-10 sm:w-14 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors shrink-0">
+								<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+							</div>
+						</h3>
+					</div>
+
+					<!-- Social media buttons -->
+					<ul class="flex flex-wrap justify-center pt-6 gap-3 sm:gap-4 animate-fade-up delay-200">
+						<!-- LinkedIn -->
+						<li>
+							<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" aria-label="LinkedIn Profile"
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+									transition-all duration-200 ease-in-out hover:bg-white/25">
+								<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+							</a>
+						</li>
+						<!-- GitHub -->
+						<li>
+							<a href="https://github.com/rbrueda" aria-label="GitHub Profile"
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+									transition-all duration-200 ease-in-out hover:bg-white/25">
+								<i class="fab fa-github absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+							</a>
+						</li>
+						<!-- Devpost -->
+						<!-- since devpost does not have built-in Font Awesome class, this approach allows it to behave like one -->
+						<li>
+							<a href="https://devpost.com/rbrueda"
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+									transition-all duration-200 ease-in-out hover:bg-white/25">
+								<span aria-hidden="true"
+									style={`-webkit-mask-image: url('${devpostIcon.src}'); mask-image: url('${devpostIcon.src}');`}
+									class="absolute top-1/2 left-1/2 h-[16px] w-[16px] sm:h-[20px] sm:w-[20px] bg-white
+											-translate-x-1/2 -translate-y-1/2
+											[-webkit-mask-repeat:no-repeat] [mask-repeat:no-repeat]
+											[-webkit-mask-position:center] [mask-position:center]
+											[-webkit-mask-size:contain] [mask-size:contain]">
+								</span>
+								<span class="sr-only">Devpost</span>
+							</a>
+						</li>
+						<!-- Email -->
+						<li>
+							<a href="mailto:rbrueda8@gmail.com" aria-label="Send an Email"
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+									transition-all duration-200 ease-in-out hover:bg-white/25">
+								<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
 				<!-- Button for see more info below in Hero -->
-				<div class="mt-auto pt-12 pb-4 animate-fade-up delay-300">
+				<div class="mt-8 pt-4 pb-2 animate-fade-up delay-300">
 					<a href="#about" class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DEB5CA]/40 text-white/70 hover:text-white hover:bg-[#DEB5CA] transition-all duration-700 animate-bounce"
 						aria-label="Scroll to About section">
 						<i class="fas fa-chevron-down text-lg" aria-hidden="true"></i>
 					</a>
-            	</div>
+				</div>
 			</section>
 
 			<!-- About Section -->
@@ -466,7 +462,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 			</section>
 
 			<!-- Projects Section -->
-			<section id="projects">
+			<section id="projects" class="px-6 md:px-8 lg:px-12 xl:px-16">
 				<!-- Divider Icon Pattern -->
 				<div class="reveal flex items-center justify-center w-full max-w-2xl mx-auto my-12 opacity-90">
 					<div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
