@@ -9,9 +9,8 @@ body {
 h1, h2, h3, .font-serif, .mobile-link, nav a {
     font-family: 'Emilys Candy', cursive !important;
     letter-spacing: 0.05em; 
-    font-weight: normal; /* Some cursive fonts look best without extra bolding */
 }
-
+ 
 /* --- MODERN ANIMATIONS --- */
 
 /* Initial Load Animation (Hero Section) */

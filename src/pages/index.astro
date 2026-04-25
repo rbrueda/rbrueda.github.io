@@ -5,10 +5,10 @@ import "../assets/css/main.css";
 import devpostIcon from "../assets/images/devpost.svg";
 ---
 <!-- todo: fix mobile bug file explorer header -->
-<!-- todo: fix mobile bug arrow down button cut off (remove the -, +, x in mobile)-->
+<!-- todo: fix mobile bug arrow down button cut off (remove the -, +, x in mobile) -->
 <!-- todo: fix mobile bug e cut off in experience in mobile (change size for headers in smaller mobile screens -- or just change headers for mobile screens in general) -->
- <!-- todo: make left, right, and bottom banner thinner for mobile screen -->
-  <!-- todo: change border if screen is still small horizontal (width wide but height small) -> change the border so it is is as thin as vertical mobile -->
+<!-- todo: make left, right, and bottom banner thinner for mobile screen -->
+<!-- todo: change border if screen is still small horizontal (width wide but height small) -> change the border so it is is as thin as vertical mobile -->
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -27,30 +27,30 @@ import devpostIcon from "../assets/images/devpost.svg";
 	<body class="min-h-screen bg-gradient-to-br from-[#241B35] via-[#4F3B66] to-[#7E5D8E] bg-fixed">
         
 		<!-- adds curved corners in frame -->
-        <div class="fixed inset-0 pointer-events-none z-[45] pt-12 pb-6 px-6 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16">
-            <div class="w-full h-full rounded-xl lg:rounded-2xl xl:rounded-[1rem] shadow-[0_0_0_50px_#2A1B2E]"></div>
-        </div>
+        <div class="fixed inset-0 pointer-events-none z-[45] pt-12 pb-6 px-6 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16 4xl:p-24">	
+			<div class="w-full h-full rounded-xl lg:rounded-2xl xl:rounded-[1rem] 4xl:rounded-[2.5rem] shadow-[0_0_0_50px_#2A1B2E]"></div>	
+		</div>
         
         <!-- nav bar top -->
-		<nav class="fixed top-0 left-0 w-full h-12 lg:h-14 xl:h-16 bg-[#2A1B2E] z-50 flex justify-between items-center px-4 md:px-8 ">
+		<nav class="fixed top-0 left-0 w-full h-12 lg:h-14 xl:h-16 4xl:h-24 bg-[#2A1B2E] z-50 flex justify-between items-center px-4 md:px-8">
             <!-- Camera icon -->
-			<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#110B13] shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)]" aria-hidden="true">
-                <div class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#4A5568] flex items-start justify-end p-[1px] md:p-[2px]"></div>
+			<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-3 h-3 md:w-4 md:h-4 4xl:w-6 4xl:h-6 rounded-full bg-[#110B13] shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)]" aria-hidden="true">
+                <div class="w-1.5 h-1.5 md:w-2 md:h-2 4xl:w-3 4xl:h-3 rounded-full bg-[#4A5568] flex items-start justify-end p-[1px] md:p-[2px]"></div>
                 <!-- Sparkle/Flash element -->
 				<div class="absolute -right-3 -top-2 md:-right-4 md:-top-2 w-1.5 h-1.5 bg-white rounded-full opacity-0 pointer-events-none camera-flash"></div>
             </div>
             
 			<!-- Hero Section Link -->
-            <a href="#home" class="hover:bg-[#503C67] transition-colors relative z-10">
+            <a href="#home" class="hover:bg-[#503C67] rounded-lg transition-colors relative z-10">
                 <!-- todo: add icon here I made -->
-				<div class="flex items-center text-white text-xl md:text-2xl">
+				<div class="flex items-center text-white text-xl md:text-2xl 4xl:text-5xl">
                     <i class="fas fa-laptop mr-2" aria-hidden="true"></i> Rocio
                 </div>
             </a>
             
 			<!-- Hamburger menu for smaller width -->
             <div id="mobile-menu" class="fixed top-12 lg:top-14 xl:top-16 right-0 w-80 bg-[#2A1B2E] border-b border-l border-white/10 shadow-2xl z-[49] hidden flex-col pb-16 pl-20 rounded-bl-full lg:hidden">
-                <ul class="flex flex-col gap-6 text-white/90 font-bold text-2xl text-center list-none w-full pr-4 mt-6">
+                <ul class="flex flex-col gap-6 text-white/90 text-2xl text-center list-none w-full pr-4 mt-6">
                     <li><a href="#about" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">About</a></li>
                     <li><a href="#experience" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">Experience</a></li>
                     <li><a href="#projects" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">Projects</a></li>
@@ -59,7 +59,7 @@ import devpostIcon from "../assets/images/devpost.svg";
             </div>
             
 			<!-- Original menu elsewise -->
-            <ul class="hidden lg:flex gap-6 text-white/90 font-bold list-none text-xl md:text-2xl relative z-10">
+            <ul class="hidden lg:flex gap-6 4xl:gap-12 text-white/90 list-none text-xl md:text-2xl 4xl:text-5xl relative z-10">
                 <li><a href="#about" class="hover:bg-[#503C67] rounded-lg transition-colors">About</a></li>
                 <li><a href="#experience" class="hover:bg-[#503C67] rounded-lg transition-colors">Experience</a></li>
                 <li><a href="#projects" class="hover:bg-[#503C67] rounded-lg transition-colors">Projects</a></li>
@@ -73,53 +73,54 @@ import devpostIcon from "../assets/images/devpost.svg";
         </nav>
 
 		<!-- nav bar bottom -->
-        <nav class="fixed bottom-0 left-0 w-full h-6 lg:h-10 xl:h-16 bg-[#2A1B2E] z-50 flex justify-center items-center">
+        <nav class="fixed bottom-0 left-0 w-full h-6 lg:h-10 xl:h-16 4xl:h-24 bg-[#2A1B2E] z-50 flex justify-center items-center">
         </nav>
         
 		<!-- nav bar left -->
-        <nav class="fixed top-12 lg:top-14 xl:top-16 left-0 w-6 lg:w-10 xl:w-16 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] bg-[#2A1B2E] z-50 flex flex-col justify-center items-center gap-8 ">
-        </nav>
+        <nav class="fixed top-12 lg:top-14 xl:top-16 4xl:top-24 left-0 w-6 lg:w-10 xl:w-16 4xl:w-24 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] 4xl:h-[calc(100vh-12rem)] bg-[#2A1B2E] z-50 flex flex-col justify-center items-center gap-8">
+		</nav>
 
 		<!-- nav bar right -->
-        <nav class="fixed top-12 lg:top-14 xl:top-16 right-0 w-6 lg:w-10 xl:w-16 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] bg-[#2A1B2E] z-50 flex flex-col justify-center items-center ">
-        </nav>
+		<nav class="fixed top-12 lg:top-14 xl:top-16 4xl:top-24 right-0 w-6 lg:w-10 xl:w-16 4xl:w-24 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] 4xl:h-[calc(100vh-12rem)] bg-[#2A1B2E] z-50 flex flex-col justify-center items-center">
+		</nav>
         
 		<!-- main tag that ensures consistent padding across the web page -->
-        <main class="w-full min-h-screen pt-12 pb-6 px-6 md:pb-8 md:px-8 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16">
+        <main class="w-full min-h-screen pt-12 pb-6 p-6 md:pb-8 md:px-8 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16 4xl:p-24">
 			<!-- Home/Hero Section -->
 			<section id="home" class="relative min-h-[85vh] lg:min-h-[calc(100vh-10rem)] flex flex-col items-center py-8 fade-content visible">
 				<!-- Avatar container -->
 				<div class="flex flex-col items-center justify-center flex-1 w-full max-w-2xl px-2 mt-8 lg:mt-0">
 					
-					<div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full border border-white/50 overflow-hidden mb-6 
-						shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
-						transition-all duration-500 ease-in-out
-						hover:-translate-y-3 animate-fade-up shrink-0">
-						<Image
-							src={import("../assets/images/avatar.jpg")}
-							alt="Rocio Rueda"
-							width={640}  
-							height={640} 
-							format="webp"
-							class="object-cover w-full h-full"
-						/>
+					<div class="animate-fade-up shrink-0 mb-6">
+						<div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 4xl:w-[600px] 4xl:h-[600px] rounded-full border border-white/50 overflow-hidden 
+									shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
+									transition-all duration-500 ease-in-out hover:-translate-y-3">
+							
+							<Image
+								src={import("../assets/images/avatar.jpg")}
+								alt="Rocio Rueda"
+								width={640}  
+								height={640} 
+								format="webp"
+								class="object-cover w-full h-full"
+							/>
+						</div>
 					</div>
 					<!-- Info and pitch text -->
 					<!-- Content wrapped relative to text width size -->
-					<div class="flex flex-col items-center gap-2 sm:gap-3 transition-all duration-500 ease-in-out hover:-translate-y-2 animate-fade-up delay-100 w-full text-center">
-						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Rocio Rueda</h1>
-
-						<h3 class="text-base sm:text-xl lg:text-2xl font-bold text-white bg-black/20 py-2 px-6 rounded-xl">
-							Software and ML Enthusiast
-						</h3>
-						
-						<h3 class="relative inline-flex items-center justify-center text-sm sm:text-lg lg:text-xl font-bold text-white bg-black/30 overflow-hidden rounded-xl">
-							<span class="py-2 pl-5 sm:pl-8 md:pl-10 pr-12 sm:pr-16 text-center">BSc Computer Science Student</span>
-							
-							<div class="absolute right-0 top-0 bottom-0 w-10 sm:w-14 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors shrink-0">
-								<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
-							</div>
-						</h3>
+					<div class="animate-fade-up delay-100 w-full text-center">
+						<div class="flex flex-col items-center gap-2 sm:gap-3 transition-all duration-500 ease-in-out hover:-translate-y-2 w-full">
+							<h1 class="text-3xl sm:text-4xl lg:text-5xl 4xl:text-8xl text-white">Rocio Rueda</h1>
+							<h3 class="text-base sm:text-xl lg:text-2xl 4xl:text-5xl text-white bg-black/20 py-2 px-6 rounded-xl">
+								Software and ML Enthusiast
+							</h3>
+							<h3 class="relative inline-flex items-center justify-center text-sm sm:text-lg lg:text-xl 4xl:text-4xl text-white bg-black/30 overflow-hidden rounded-xl">
+								<span class="py-2 pl-5 sm:pl-8 md:pl-10 4xl:pl-14 pr-12 sm:pr-16 text-center">BSc Computer Science Student</span>
+								<div class="absolute right-0 top-0 bottom-0 w-10 sm:w-14 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors shrink-0">
+									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+								</div>
+							</h3>
+						</div>
 					</div>
 
 					<!-- Social media buttons -->
@@ -127,28 +128,28 @@ import devpostIcon from "../assets/images/devpost.svg";
 						<!-- LinkedIn -->
 						<li>
 							<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" aria-label="LinkedIn Profile"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 						<!-- GitHub -->
 						<li>
 							<a href="https://github.com/rbrueda" aria-label="GitHub Profile"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fab fa-github absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fab fa-github absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 						<!-- Devpost -->
 						<!-- since devpost does not have built-in Font Awesome class, this approach allows it to behave like one -->
 						<li>
 							<a href="https://devpost.com/rbrueda"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
 								<span aria-hidden="true"
 									style={`-webkit-mask-image: url('${devpostIcon.src}'); mask-image: url('${devpostIcon.src}');`}
-									class="absolute top-1/2 left-1/2 h-[16px] w-[16px] sm:h-[20px] sm:w-[20px] bg-white
+									class="absolute top-1/2 left-1/2 h-[16px] w-[16px] sm:h-[20px] sm:w-[20px] 4xl:h-[40px] 4xl:w-[40px] bg-white
 											-translate-x-1/2 -translate-y-1/2
 											[-webkit-mask-repeat:no-repeat] [mask-repeat:no-repeat]
 											[-webkit-mask-position:center] [mask-position:center]
@@ -160,9 +161,9 @@ import devpostIcon from "../assets/images/devpost.svg";
 						<!-- Email -->
 						<li>
 							<a href="mailto:rbrueda8@gmail.com" aria-label="Send an Email"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6
+							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 					</ul>
@@ -170,9 +171,9 @@ import devpostIcon from "../assets/images/devpost.svg";
 
 				<!-- Button for see more info below in Hero -->
 				<div class="mt-8 pt-4 pb-2 animate-fade-up delay-300">
-					<a href="#about" class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DEB5CA]/40 text-white/70 hover:text-white hover:bg-[#DEB5CA] transition-all duration-700 animate-bounce"
+					<a href="#about" class="flex items-center justify-center w-8 h-8 4xl:w-16 4xl:h-16 rounded-full bg-[#DEB5CA]/40 text-white/70 hover:text-white hover:bg-[#DEB5CA] transition-all duration-700 animate-bounce"
 						aria-label="Scroll to About section">
-						<i class="fas fa-chevron-down text-lg" aria-hidden="true"></i>
+						<i class="fas fa-chevron-down text-lg 4xl:text-2xl" aria-hidden="true"></i>
 					</a>
 				</div>
 			</section>
@@ -180,32 +181,32 @@ import devpostIcon from "../assets/images/devpost.svg";
 			<!-- About Section -->
 			<section id="about">
 				<!-- floral divider per section -->
-				<div class="reveal flex items-center justify-center w-full max-w-2xl mx-auto my-12 opacity-90">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
+				<div class="reveal flex items-center justify-center w-full max-w-2xl 4xl:max-w-9xl mx-auto my-12 5xl:my-24 opacity-90">
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
 					<div class="px-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
-						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">	
+						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20 4xl:w-[500px] 4xl:h-32" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">  
 							<path d="M 10 30 C 80 30, 100 10, 125 30 C 150 50, 170 30, 240 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
 							<path d="M 105 15 C 105 5, 95 5, 95 15 C 85 15, 85 25, 95 25 C 95 35, 105 35, 105 25 C 115 25, 115 15, 105 15 Z" fill="currentColor"/>
 							<circle cx="100" cy="20" r="2.5" fill="#4F3B66"/>
 							<path d="M 145 40 C 145 30, 155 30, 155 40 C 165 40, 165 50, 155 50 C 155 60, 145 60, 145 50 C 135 50, 135 40, 145 40 Z" fill="currentColor"/>
 							<circle cx="150" cy="45" r="2.5" fill="#4F3B66"/>
 							<path d="M 50 30 Q 60 20 70 30 Q 60 35 50 30 Z" fill="currentColor"/>
-							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>	
+							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>  
 						</svg>
 					</div>
-					<div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/60"></div>
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-l from-transparent to-white/60"></div>	
 				</div>
 
 				<!-- About Header -->
-				<h1 class="reveal text-4xl md:text-6xl font-bold text-center text-white pb-8">About</h1>
+				<h1 class="reveal text-4xl md:text-6xl 4xl:text-9xl text-center text-white pb-8">About</h1>
 
 				<!-- About me content -->
 				<!-- div for dividing photo and text content -->
-				<div class="reveal flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start w-full max-w-[1200px] mx-auto px-4 lg:px-0">
+				<div class="reveal flex flex-col lg:flex-row gap-8 lg:gap-12 4xl:gap-16 items-center lg:items-start w-full max-w-[1200px] 4xl:max-w-[2400px] mx-auto px-4 lg:px-0">
     				<!-- Photo content -->
 					<div class="w-full lg:w-1/2 flex flex-col rounded-xl bg-black/10 border border-white/10 shadow-2xl overflow-hidden">
 						<!-- Photo Header content -->
-						<div class="h-10 flex items-center justify-between px-2 bg-black/20 border-b border-white/5 text-white/80 text-xs select-none">
+						<div class="h-10 4xl:h-16 flex items-center justify-between px-2 4xl:px-4 bg-black/20 border-b border-white/5 text-white/80 text-xs 4xl:text-xl select-none">
 							<div class="flex items-center gap-3 pl-2">
 								<i class="fas fa-arrow-left text-white/50 hover:text-white cursor-pointer transition-colors" aria-hidden="true"></i>
 								<div class="border-l border-white/20 h-4 mx-1"></div>
@@ -217,13 +218,13 @@ import devpostIcon from "../assets/images/devpost.svg";
 								AboutMe.jpg
 							</div>
 							<div class="flex items-center" aria-hidden="true">
-								<button class="w-8 h-8 flex items-center justify-center hover:bg-white/10 rounded transition-colors"><i class="fas fa-minus text-[10px]"></i></button>
-								<button class="w-8 h-8 flex items-center justify-center hover:bg-white/10 rounded transition-colors"><i class="far fa-square text-[11px]"></i></button>
-								<button class="w-8 h-8 flex items-center justify-center hover:bg-[#DEB5CA] rounded transition-colors"><i class="fas fa-times text-[14px]"></i></button>
+								<button class="w-8 h-8 4xl:w-12 4xl:h-12 flex items-center justify-center hover:bg-white/10 rounded transition-colors"><i class="fas fa-minus text-[10px] 4xl:text-[12px]"></i></button>
+								<button class="w-8 h-8 4xl:w-12 4xl:h-12 flex items-center justify-center hover:bg-white/10 rounded transition-colors"><i class="far fa-square text-[11px] 4x:text-[13px]"></i></button>
+								<button class="w-8 h-8 4xl:w-12 4xl:h-12 flex items-center justify-center hover:bg-[#DEB5CA] rounded transition-colors"><i class="fas fa-times text-[14px] 4xl:text-[16px]"></i></button>
 							</div>
         				</div>
 						<!-- Image content -->
-						<div class="relative h-72 md:h-96 overflow-hidden">
+						<div class="relative h-72 md:h-96 3xl:h-[500px] 5xl:h-[800px] overflow-hidden">
 							<Image 
 								src={import("../assets/images/about/about.jpg")} 
 								alt="About" 
@@ -235,7 +236,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 							/>
 						</div>
 						<!-- Photo Footer content -->
-						<div class="h-10 flex items-center justify-between px-4 border-t border-white/5 text-white/50 text-[11px] select-none">
+						<div class="h-10 4xl:h-16 flex items-center justify-between px-4 border-t border-white/5 text-white/50 text-[11px] 4xl:text-[20px] select-none">
 							<div>3,024 × 3,365 &nbsp;|&nbsp; 1.9 MB</div>
 							<div class="flex items-center gap-3">
 								<span class="hidden sm:inline-block">50%</span>
@@ -252,13 +253,13 @@ import devpostIcon from "../assets/images/devpost.svg";
 					<!-- Text Content -->
 					<div class="w-full lg:w-1/2 flex flex-col justify-center text-white/90">
 						<!-- Quote content -->
-						<blockquote class="border-l-4 border-[#deb5ca] pl-4 md:pl-6 italic text-white/80 mb-8 py-2 pr-1 bg-white/5 rounded-r-lg">
+						<blockquote class="border-l-4 4xl:border-l-8 border-[#deb5ca] pl-4 md:pl-6 4xl:pl-10 italic text-white/80 mb-8 py-2 4xl:py-6 pr-1 bg-white/5 rounded-r-lg text-base md:text-lg 4xl:text-4xl leading-relaxed">
 							“Give your dreams all you’ve got, and you’ll be amazed at the energy that comes out of you.”<br/>
-							<span class="text-sm font-semibold text-[#deb5ca] mt-2 inline-block">— William James</span>
+							<span class="text-sm md:text-base 4xl:text-3xl font-semibold text-[#deb5ca] mt-2 4xl:mt-4 inline-block">— William James</span>
 						</blockquote>
 						<!-- Paragraph content -->
-						<div class="space-y-5 text-base md:text-lg leading-relaxed font-semibold">
-							<p>Hi, I’m <strong class="text-[#deb5ca] text-xl">Rocio</strong>. I’m a Computer Science student at the University of Windsor specializing in Artificial Intelligence.</p>
+						<div class="space-y-5 text-base md:text-lg 4xl:text-4xl leading-relaxed font-semibold">
+							<p>Hi, I’m <strong class="text-[#deb5ca] text-xl 4xl:text-5xl">Rocio</strong>. I’m a Computer Science student at the University of Windsor specializing in Artificial Intelligence.</p>
 							<p>While my interest in computer science grew during university, my curiosity for building things started long before that. I’ve always enjoyed experimenting, creating, and figuring out how things work, whether through art or code.</p>
 							<p>Somewhere along the way, programming became the place where all of that finally clicked. My current interests sit between software development and machine learning, and I’m always excited to learn new tools and technologies along the way!</p>
 						</div>
@@ -270,49 +271,49 @@ import devpostIcon from "../assets/images/devpost.svg";
 			<!-- Experience Section -->
 			<section id="experience" class="page-section w-full px-4 pt-12">
 				<!-- floral divider per section -->
-				<div class="reveal flex items-center justify-center w-full max-w-2xl mx-auto my-12 opacity-90">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
+				<div class="reveal flex items-center justify-center w-full max-w-2xl 4xl:max-w-8xl mx-auto my-12 5xl:my-24 opacity-90">
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
 					<div class="px-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
-						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">		
+						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20 4xl:w-[500px] 4xl:h-32" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">  
 							<path d="M 10 30 C 80 30, 100 10, 125 30 C 150 50, 170 30, 240 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
 							<path d="M 105 15 C 105 5, 95 5, 95 15 C 85 15, 85 25, 95 25 C 95 35, 105 35, 105 25 C 115 25, 115 15, 105 15 Z" fill="currentColor"/>
 							<circle cx="100" cy="20" r="2.5" fill="#4F3B66"/>
 							<path d="M 145 40 C 145 30, 155 30, 155 40 C 165 40, 165 50, 155 50 C 155 60, 145 60, 145 50 C 135 50, 135 40, 145 40 Z" fill="currentColor"/>
 							<circle cx="150" cy="45" r="2.5" fill="#4F3B66"/>
 							<path d="M 50 30 Q 60 20 70 30 Q 60 35 50 30 Z" fill="currentColor"/>
-							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>		
+							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>  
 						</svg>
-					</div>	
-					<div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/60"></div>
+					</div>
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-l from-transparent to-white/60"></div>	
 				</div>
 				
 				<!-- Experience Header -->
-				<h1 class="reveal text-4xl md:text-6xl font-bold text-center text-white pb-8">Experience</h1>
+				<h1 class="reveal text-4xl md:text-6xl 4xl:text-9xl text-center text-white pb-8">Experience</h1>
 				
 				<!-- File Explorer container  -->
-				<div class="reveal mx-auto w-full max-w-[1400px] rounded-xl backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden flex flex-col font-['Quicksand',_sans-serif]">
+				<div class="reveal mx-auto w-full max-w-[1400px] 4xl:max-w-[2800px] rounded-xl backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden flex flex-col font-['Quicksand',_sans-serif]">
 									
 					<!-- File header -->
-					<div class="h-10 flex items-center justify-between border-b border-white/10 pl-4">
-						<div class="flex items-center gap-2 text-white/90 text-sm font-semibold tracking-wide">
+					<div class="h-10 4xl:h-16 flex items-center justify-between border-b border-white/10 pl-4">
+						<div class="flex items-center gap-2 text-white/90 text-sm 4xl:text-2xl font-semibold 4xl:font-normal tracking-wide">
 							<i class="fas fa-folder-open text-[#DEB5CA]/70" aria-hidden="true"></i>
 							<span>C:\Users\Rocio\Experience</span>
 						</div>
 						<div class="flex h-full" aria-hidden="true">
 							<button class="w-12 h-full flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-colors">
-								<i class="fas fa-minus text-[10px]"></i>
+								<i class="fas fa-minus text-[10px] 4xl:text-[12px]"></i>
 							</button>
 							<button class="w-12 h-full flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-colors">
-								<i class="far fa-square text-[11px]"></i>
+								<i class="far fa-square text-[11px] 4xl:text-[13px]"></i>
 							</button>
 							<button class="w-12 h-full flex items-center justify-center text-white/80 hover:bg-[#DEB5CA] hover:text-white transition-colors">
-								<i class="fas fa-times text-[14px]"></i>
+								<i class="fas fa-times text-[14px] 4xl:text-[16px]"></i>
 							</button>
 						</div>
 					</div>
 
 					<!-- File path and search content section (Hidden until lg breakpoint) -->
-					<div class="h-14 border-b border-white/10 text-white flex items-center px-4 gap-4 lg:gap-6 text-sm hidden lg:flex">
+					<div class="h-14 4xl:h-18 border-b border-white/10 text-white flex items-center px-4 gap-4 lg:gap-6 text-sm 4xl:text-2xl hidden lg:flex">
 						
 						<div class="flex items-center gap-4 text-white/40 shrink-0" aria-hidden="true">
 							<i class="fas fa-arrow-left hover:text-white cursor-pointer transition-colors"></i>
@@ -330,43 +331,42 @@ import devpostIcon from "../assets/images/devpost.svg";
 						</div>
 						
 						<!-- Search Bar -->
-						<div class="w-48 xl:w-64 shrink-0 bg-white/5 rounded px-3 py-2 flex items-center justify-between border border-white/10 shadow-inner">
+						<div class="w-48 xl:w-64 4xl:w-72 shrink-0 bg-white/5 rounded px-3 py-2 flex items-center justify-between border border-white/10 shadow-inner">
 							<span class="text-white/40 italic truncate">Search Experience...</span>
 							<i class="fas fa-search text-white/40 shrink-0" aria-hidden="true"></i>
 						</div>
 					</div>
 
 					<!-- Main Content Split (skills and experience) -->
-					<div class="flex flex-col lg:flex-row h-auto lg:h-[600px] p-4 lg:p-6 gap-4 lg:gap-6">
+					<div class="flex flex-col lg:flex-row h-auto lg:h-[600px] 4xl:h-[1000px] p-4 lg:p-6 gap-4 lg:gap-6">
 						
 						<!-- Quick Access Sidebar -->
-						<div class="w-full lg:w-1/4 xl:w-1/5 bg-black/10 border border-white/10 rounded-lg p-4 overflow-y-auto shadow-inner custom-scrollbar">
-							<h3 class="text-xs lg:text-sm font-bold text-white uppercase tracking-wider mb-4 pl-2">Quick Access</h3>
-							
-							<ul class="grid grid-cols-2 lg:flex lg:flex-col gap-2 lg:gap-1 text-sm lg:text-base text-white font-semibold">
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fab fa-python text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>Python</span>
+						<div class="w-full lg:w-1/4 xl:w-1/5 bg-black/10 border border-white/10 rounded-lg p-4 4xl:p-8 overflow-y-auto shadow-inner custom-scrollbar">
+							<h3 class="text-xs lg:text-sm 4xl:text-xl font-bold text-white uppercase tracking-wider mb-4 4xl:mb-8 pl-2">Quick Access</h3>
+							<ul class="grid grid-cols-2 lg:flex lg:flex-col gap-2 lg:gap-1 text-sm lg:text-base 4xl:text-3xl text-white font-semibold">
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fab fa-python text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>Python</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fas fa-fire text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>PyTorch</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fas fa-fire text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>PyTorch</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fas fa-table text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>Pandas</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fas fa-table text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>Pandas</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fab fa-java text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>Java</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fab fa-java text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>Java</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fab fa-js text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>JavaScript</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fab fa-js text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>JavaScript</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fab fa-react text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>React</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fab fa-react text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>React</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fas fa-database text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>SQL</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fas fa-database text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>SQL</span>
 								</li>
-								<li class="flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-3 hover:bg-white/10 rounded cursor-pointer transition-colors">
-									<i class="fas fa-leaf text-[#deb5ca] text-lg w-5 text-center" aria-hidden="true"></i> <span>MongoDB</span>
+								<li class="flex items-center gap-2 lg:gap-3 4xl:gap-6 px-2 lg:px-3 py-2 lg:py-3 4xl:py-4 hover:bg-white/10 rounded cursor-pointer transition-colors">
+									<i class="fas fa-leaf text-[#deb5ca] text-lg 4xl:text-4xl w-5 4xl:w-12 text-center" aria-hidden="true"></i> <span>MongoDB</span>
 								</li>
 							</ul>
 						</div>
@@ -375,7 +375,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 						<div class="w-full lg:w-3/4 xl:w-4/5 bg-black/10 border border-white/10 rounded-lg p-4 lg:p-8 overflow-y-auto shadow-inner custom-scrollbar">
 							<table class="w-full text-left text-sm lg:text-base border-collapse">
 								<thead>
-									<tr class="border-b border-white/20 text-white text-xs lg:text-sm uppercase tracking-wider hidden lg:table-row">
+									<tr class="border-b border-white/20 text-white text-xs lg:text-sm 4xl:text-xl uppercase tracking-wider hidden lg:table-row">
 										<th class="pb-3 font-bold pl-2 w-1/2 lg:w-3/5">Name</th>
 										<th class="pb-3 font-bold w-1/4 lg:w-1/5">Date Modified</th>
 										<th class="pb-3 font-bold w-1/4 lg:w-1/5">Type</th>
@@ -384,75 +384,75 @@ import devpostIcon from "../assets/images/devpost.svg";
 								<tbody class="align-top">
 									<!-- Workday Experience Section -->
 									<tr class="border-b border-white/5 hover:bg-black/20 transition-colors group cursor-default block lg:table-row rounded-md">
-										<td class="py-4 lg:py-6 pl-2 block lg:table-cell">
+										<td class="py-4 lg:py-6 4xl:py-12 pl-2 block lg:table-cell">
 											<div class="flex items-start gap-3 lg:gap-4">
 												<i class="fas fa-folder text-[#deb5ca] text-2xl lg:text-3xl xl:text-4xl mt-1 drop-shadow-md transition-all" aria-hidden="true"></i>
 												<div>
-													<div class="font-bold text-lg lg:text-xl xl:text-2xl text-white group-hover:text-[#deb5ca] transition-colors">Workday</div>
-													<ul class="text-[13px] lg:text-[14px] xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Enabled 10k+ users to search for Workday Journeys via React.js integration</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Ensured 25% of Journeys started from Global Search within 6 months</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Applied query-level filtering to mitigate memory constraints</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Worked on automated Cypress UI testing framework (88% coverage)</li>
+													<div class="font-bold text-lg lg:text-xl xl:text-2xl 4xl:text-4xl text-white group-hover:text-[#deb5ca] transition-colors">Workday</div>
+													<ul class="text-[13px] lg:text-[14px] 4xl:text-3xl xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Enabled 10k+ users to search for Workday Journeys via React.js integration</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Ensured 25% of Journeys started from Global Search within 6 months</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Applied query-level filtering to mitigate memory constraints</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Worked on automated Cypress UI testing framework (88% coverage)</li>
 													</ul>
 												</div>
 											</div>
 										</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm xl:text-base">May 2025 - Dec 2025</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm xl:text-base">Software Development Engineer Intern</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm 4xl:text-2xl xl:text-base">May 2025 - Dec 2025</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm 4xl:text-2xl xl:text-base">Software Development Engineer Intern</td>
 									</tr>
 									<!-- CIBC Experience Section -->
 									<tr class="border-b border-white/5 hover:bg-black/20 transition-colors group cursor-default block lg:table-row rounded-md">
-										<td class="py-4 lg:py-6 pl-2 block lg:table-cell">
+										<td class="py-4 lg:py-6 4xl:py-12 pl-2 block lg:table-cell">
 											<div class="flex items-start gap-3 lg:gap-4">
 												<i class="fas fa-folder text-[#deb5ca] text-2xl lg:text-3xl xl:text-4xl mt-1 drop-shadow-md transition-all" aria-hidden="true"></i>
 												<div>
-													<div class="font-bold text-lg lg:text-xl xl:text-2xl text-white group-hover:text-[#deb5ca] transition-colors">CIBC</div>
-													<ul class="text-[13px] lg:text-[14px] xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Implemented self-driven Power Automate system for queue management</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Boosted employee productivity by approximately 50%</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Provided IT support for 50+ employees using Active Directory</li>
+													<div class="font-bold text-lg lg:text-xl xl:text-2xl 4xl:text-4xl text-white group-hover:text-[#deb5ca] transition-colors">CIBC</div>
+													<ul class="text-[13px] lg:text-[14px] 4xl:text-3xl xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Implemented self-driven Power Automate system for queue management</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Boosted employee productivity by approximately 50%</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Provided IT support for 50+ employees using Active Directory</li>
 													</ul>
 												</div>
 											</div>
 										</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm xl:text-base">Sep 2024 - Dec 2024</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm xl:text-base">Technical Systems Analyst Co-op</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm 4xl:text-2xl xl:text-base">Sep 2024 - Dec 2024</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm 4xl:text-2xl xl:text-base">Technical Systems Analyst Co-op</td>
 									</tr>
 									<!-- Research Assistant Experience Section -->
 									<tr class="border-b border-white/5 hover:bg-black/20 transition-colors group cursor-default block lg:table-row rounded-md">
-										<td class="py-4 lg:py-6 pl-2 block lg:table-cell">
+										<td class="py-4 lg:py-6 4xl:py-12 pl-2 block lg:table-cell">
 											<div class="flex items-start gap-3 lg:gap-4">
 												<i class="fas fa-folder text-[#deb5ca] text-2xl lg:text-3xl xl:text-4xl mt-1 drop-shadow-md transition-all" aria-hidden="true"></i>
 												<div>
-													<div class="font-bold text-lg lg:text-xl xl:text-2xl text-white group-hover:text-[#deb5ca] transition-colors">University of Windsor</div>
-													<ul class="text-[13px] lg:text-[14px] xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Integrated drug embedding algorithms for HGNN DDI prediction</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Analyzed 75,000+ Reddit comments on Generative AI</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Applied preprocessing to remove non-informational data</li>
+													<div class="font-bold text-lg lg:text-xl xl:text-2xl 4xl:text-4xl text-white group-hover:text-[#deb5ca] transition-colors">University of Windsor</div>
+													<ul class="text-[13px] lg:text-[14px] 4xl:text-3xl xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Integrated drug embedding algorithms for HGNN DDI prediction</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Analyzed 75,000+ Reddit comments on Generative AI</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Applied preprocessing to remove non-informational data</li>
 													</ul>
 												</div>
 											</div>
 										</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm xl:text-base">Sep 2023 - Aug 2025</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm xl:text-base">Undergraduate Research Assistant</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm 4xl:text-2xl xl:text-base">Sep 2023 - Aug 2025</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm 4xl:text-2xl xl:text-base">Undergraduate Research Assistant</td>
 									</tr>
 									<!-- Teaching Assistant Experience Section -->
 									<tr class="hover:bg-black/20 transition-colors group cursor-default block lg:table-row rounded-md">
-										<td class="py-4 lg:py-6 pl-2 block lg:table-cell">
+										<td class="py-4 lg:py-6 4xl:py-12 pl-2 block lg:table-cell">
 											<div class="flex items-start gap-3 lg:gap-4">
 												<i class="fas fa-folder text-[#deb5ca] text-2xl lg:text-3xl xl:text-4xl mt-1 drop-shadow-md transition-all" aria-hidden="true"></i>
 												<div>
-													<div class="font-bold text-lg lg:text-xl xl:text-2xl text-white group-hover:text-[#deb5ca] transition-colors">University of Windsor</div>
-													<ul class="text-[13px] lg:text-[14px] xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Guided students with detailed feedback on assignments and labs</li>
-														<li><span class="text-[#deb5ca] mr-2 text-lg leading-none">›</span>Mentored 50+ students in C and Java fundamentals</li>
+													<div class="font-bold text-lg lg:text-xl xl:text-2xl 4xl:text-4xl text-white group-hover:text-[#deb5ca] transition-colors">University of Windsor</div>
+													<ul class="text-[13px] lg:text-[14px] 4xl:text-3xl xl:text-base text-white mt-3 lg:mt-4 space-y-2 lg:space-y-3 list-none hidden group-hover:block transition-all pr-4 lg:pr-12">
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Guided students with detailed feedback on assignments and labs</li>
+														<li><span class="text-[#deb5ca] mr-2 text-lg 4xl:text-4xl leading-none">›</span>Mentored 50+ students in C and Java fundamentals</li>
 													</ul>
 												</div>
 											</div>
 										</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm xl:text-base">Sep 2023 - April 2025</td>
-										<td class="py-4 lg:py-6 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm xl:text-base">Undergraduate Teaching Assistant</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 text-sm 4xl:text-2xl xl:text-base">Sep 2023 - April 2025</td>
+										<td class="py-4 lg:py-6 4xl:py-12 text-white font-bold block lg:table-cell pl-11 lg:pl-0 pb-6 lg:pb-4 text-sm 4xl:text-2xl xl:text-base">Undergraduate Teaching Assistant</td>
 									</tr>
 								</tbody>
 							</table>
@@ -462,28 +462,29 @@ import devpostIcon from "../assets/images/devpost.svg";
 			</section>
 
 			<!-- Projects Section -->
+			<!-- todo: look at padding problem with 4xl page -->
 			<section id="projects" class="px-6 md:px-8 lg:px-12 xl:px-16">
 				<!-- Divider Icon Pattern -->
-				<div class="reveal flex items-center justify-center w-full max-w-2xl mx-auto my-12 opacity-90">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
+				<div class="reveal flex items-center justify-center w-full max-w-2xl 4xl:max-w-9xl mx-auto my-12 5xl:my-24 opacity-90">
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
 					<div class="px-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
-						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20 4xl:w-[500px] 4xl:h-32" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">  
 							<path d="M 10 30 C 80 30, 100 10, 125 30 C 150 50, 170 30, 240 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
 							<path d="M 105 15 C 105 5, 95 5, 95 15 C 85 15, 85 25, 95 25 C 95 35, 105 35, 105 25 C 115 25, 115 15, 105 15 Z" fill="currentColor"/>
 							<circle cx="100" cy="20" r="2.5" fill="#4F3B66"/>
 							<path d="M 145 40 C 145 30, 155 30, 155 40 C 165 40, 165 50, 155 50 C 155 60, 145 60, 145 50 C 135 50, 135 40, 145 40 Z" fill="currentColor"/>
 							<circle cx="150" cy="45" r="2.5" fill="#4F3B66"/>
 							<path d="M 50 30 Q 60 20 70 30 Q 60 35 50 30 Z" fill="currentColor"/>
-							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>		
+							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>  
 						</svg>
-					</div>		
-					<div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/60"></div>
+					</div>
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-l from-transparent to-white/60"></div>	
 				</div>
 
 				<!-- Project Header -->
-				<h1 class="reveal text-4xl md:text-6xl font-bold text-center text-white pb-8">Projects</h1>
+				<h1 class="reveal text-4xl md:text-6xl 4xl:text-9xl text-center text-white pb-8">Projects</h1>
 				<!-- Project Thumbnails -->
-				<section class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-8">
+				<section class="grid gap-8 4xl:gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-8">
 						<a href="https://github.com/sanvikaushik/stockhouse"
 							class="reveal block text-center text-white rounded p-4
 							bg-[rgba(222,181,202,0.10)]
@@ -491,7 +492,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 							hover:bg-[rgba(222,181,202,0.25)]
 							hover:shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
 							overflow-hidden
-							p-4">
+							p-4 4xl:p-8">
 							<Image
 								src={import("../assets/images/projects/1.jpg")}
 								alt="BrickByBrick project preview"
@@ -501,9 +502,9 @@ import devpostIcon from "../assets/images/devpost.svg";
 								loading="lazy"
 								class="rounded object-cover w-full h-auto"
 							/>
-							<h2 class="mt-4 text-xl font-semibold text-white">BrickByBrick</h2>
-							<p class="mt-2 text-base text-white/90 leading-relaxed">Jan – Jan 2026</p>
-							<ul class="mt-2 text-lg text-white/90 leading-relaxed list-disc list-inside">
+							<h2 class="mt-4 text-lg md:text-xl 4xl:text-5xl text-white">BrickByBrick</h2>
+							<p class="mt-2 text-sm md:text-base 4xl:text-3xl text-white/90 leading-relaxed">Jan – Jan 2026</p>
+							<ul class="mt-2 text-base md:text-lg 4xl:text-4xl text-white/90 leading-relaxed list-disc list-inside">
 							<li>Shared-equity platform simulating stock-style home investments</li>
 							<li>Built with Python, JavaScript, Snowflake, MongoDB</li>
 							</ul>
@@ -516,7 +517,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 							hover:bg-[rgba(222,181,202,0.25)]
 							hover:shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
 							overflow-hidden
-							p-4">
+							p-4 4xl:p-8">
 							<Image
 								src={import("../assets/images/projects/2.png")}
 								alt="Smart Lot project preview"
@@ -526,9 +527,9 @@ import devpostIcon from "../assets/images/devpost.svg";
 								loading="lazy"
 								class="rounded object-cover w-full h-auto text-center"
 							/>
-							<h2 class="mt-4 text-xl font-semibold text-white">Smart Lot</h2>
-							<p class="mt-2 text-base text-white/90 leading-relaxed">Feb - Feb 2024</p>
-							<ul class="mt-2 text-lg text-white/90 leading-relaxed list-disc list-inside">
+							<h2 class="mt-4 text-lg md:text-xl 4xl:text-5xl text-white">Smart Lot</h2>
+							<p class="mt-2 text-sm md:text-base 4xl:text-3xl text-white/90 leading-relaxed">Feb - Feb 2024</p>
+							<ul class="mt-2 text-base md:text-lg 4xl:text-4xl text-white/90 leading-relaxed list-disc list-inside">
 							<li>WinHacks 2024 Hackathon Submission</li>
 							<li>Captured live camera views and real-life model of parking lots using OpenCV, Arduino, MariaDB, and Streamlit</li>
 							</ul>
@@ -541,7 +542,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 							hover:bg-[rgba(222,181,202,0.25)]
 							hover:shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
 							overflow-hidden
-							p-4">
+							p-4 4xl:p-8">
 							<Image
 								src={import("../assets/images/projects/3.png")}
 								alt="Sentiment Analysis project preview"
@@ -551,9 +552,9 @@ import devpostIcon from "../assets/images/devpost.svg";
 								loading="lazy"
 								class="rounded object-cover w-full h-auto"
 							/>
-							<h2 class="mt-4 text-xl font-semibold text-white">Sentiment Analysis</h2>
-							<p class="mt-2 text-base text-white/90 leading-relaxed">Sep 2024 - Apr 2025</p>
-							<ul class="mt-2 text-lg text-white/90 leading-relaxed list-disc list-inside">
+							<h2 class="mt-4 text-lg md:text-xl 4xl:text-5xl text-white">Sentiment Analysis</h2>
+							<p class="mt-2 text-sm md:text-base 4xl:text-3xl text-white/90 leading-relaxed">Sep 2024 - Apr 2025</p>
+							<ul class="mt-2 text-base md:text-lg 4xl:text-4xl text-white/90 leading-relaxed list-disc list-inside">
 							<li>Research-based project for analyzing user sentiments related to Generative AI</li>
 							<li>Build with Reddit API, IBM NLP API, and Pandas</li>
 							</ul>
@@ -565,58 +566,58 @@ import devpostIcon from "../assets/images/devpost.svg";
 			<!-- Contact Section -->
 			<section id="contact">
 				<!-- Divider Icon Pattern -->
-				<div class="reveal flex items-center justify-center w-full max-w-2xl mx-auto my-12 opacity-90">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
+				<div class="reveal flex items-center justify-center w-full max-w-2xl 4xl:max-w-9xl mx-auto my-12 5xl:my-24 opacity-90">
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-r from-transparent to-white/60"></div>
 					<div class="px-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">
-						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg aria-hidden="true" class="w-56 h-16 md:w-64 md:h-20 4xl:w-[500px] 4xl:h-32" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">  
 							<path d="M 10 30 C 80 30, 100 10, 125 30 C 150 50, 170 30, 240 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
 							<path d="M 105 15 C 105 5, 95 5, 95 15 C 85 15, 85 25, 95 25 C 95 35, 105 35, 105 25 C 115 25, 115 15, 105 15 Z" fill="currentColor"/>
 							<circle cx="100" cy="20" r="2.5" fill="#4F3B66"/>
 							<path d="M 145 40 C 145 30, 155 30, 155 40 C 165 40, 165 50, 155 50 C 155 60, 145 60, 145 50 C 135 50, 135 40, 145 40 Z" fill="currentColor"/>
 							<circle cx="150" cy="45" r="2.5" fill="#4F3B66"/>
 							<path d="M 50 30 Q 60 20 70 30 Q 60 35 50 30 Z" fill="currentColor"/>
-							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>	
+							<path d="M 200 30 Q 190 40 180 30 Q 190 25 200 30 Z" fill="currentColor"/>  
 						</svg>
 					</div>
-					<div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/60"></div>
+					<div class="h-px 5xl:h-[2px] flex-1 bg-gradient-to-l from-transparent to-white/60"></div>	
 				</div>
 
 				<!-- Contact Header -->
-				<h1 class="reveal text-4xl md:text-6xl font-bold text-center text-white pb-8">Contact</h1>
+				<h1 class="reveal text-4xl md:text-6xl 4xl:text-9xl text-center text-white pb-8">Contact</h1>
 
 				<!-- Contact Info -->
-				<div class="reveal flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-3xl mx-auto border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md shadow-2xl">
+				<div class="reveal flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-5xl 4xl:max-w-[2400px] mx-auto border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md shadow-2xl">
 					<!-- Logo Content -->
-					<div class="flex items-center justify-center w-28 h-28 md:w-36 md:h-36 bg-white/5 rounded-full border border-white/10 shadow-inner shrink-0">
+					<div class="flex items-center justify-center w-28 h-28 md:w-36 md:h-36 4xl:w-72 4xl:h-72 bg-white/5 rounded-full border border-white/10 shadow-inner shrink-0">
 						<!-- todo add logo here -->
-						<i class="fas fa-laptop-code text-5xl md:text-6xl text-[#deb5ca]" aria-hidden="true"></i>
+						<i class="fas fa-laptop-code text-5xl md:text-6xl 4xl:text-9xl text-[#deb5ca]" aria-hidden="true"></i>
 					</div>
 					<!-- Link Content -->
-					<div class="flex flex-col gap-5 text-white font-semibold text-base md:text-lg w-full max-w-sm">
-						<a href="mailto:rbrueda8@gmail.com" class="flex items-center gap-4 hover:text-white hover:translate-x-2 transition-all duration-300 group">
-							<div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
-								<i class="fas fa-envelope text-xl" aria-hidden="true"></i>
+					<div class="flex flex-col gap-5 text-white font-semibold text-base md:text-lg w-full max-w-sm 4xl:max-w-[600px]">
+						<a href="mailto:rbrueda8@gmail.com" class="flex items-center gap-4 4xl:gap-6 hover:text-white hover:translate-x-2 transition-all duration-300 group">
+							<div class="w-12 h-12 4xl:w-20 4xl:h-20 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
+								<i class="fas fa-envelope text-xl 4xl:text-4xl" aria-hidden="true"></i>
 							</div>
-							<span class="truncate">rbrueda8@gmail.com</span>
+							<span class="truncate 4xl:text-3xl">rbrueda8@gmail.com</span>
 						</a>
-						<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 hover:text-white hover:translate-x-2 transition-all duration-300 group">
-							<div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
-								<i class="fab fa-linkedin-in text-xl" aria-hidden="true"></i>
+						<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 4xl:gap-6 hover:text-white hover:translate-x-2 transition-all duration-300 group">
+							<div class="w-12 h-12 4xl:w-20 4xl:h-20 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
+								<i class="fab fa-linkedin-in text-xl 4xl:text-4xl" aria-hidden="true"></i>
 							</div>
-							<span class="truncate">linkedin.com/in/rocio-rueda</span>
+							<span class="truncate 4xl:text-3xl">linkedin.com/in/rocio-rueda</span>
 						</a>
-						<a href="https://github.com/rbrueda" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 hover:text-white hover:translate-x-2 transition-all duration-300 group">
-							<div class="w-12 h-12 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
-								<i class="fab fa-github text-xl" aria-hidden="true"></i>
+						<a href="https://github.com/rbrueda" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 4xl:gap-6 hover:text-white hover:translate-x-2 transition-all duration-300 group">
+							<div class="w-12 h-12 4xl:w-20 4xl:h-20 shrink-0 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-[#deb5ca] group-hover:border-[#deb5ca] group-hover:text-[#2A1B2E] transition-all">
+								<i class="fab fa-github text-xl 4xl:text-4xl" aria-hidden="true"></i>
 							</div>
-							<span class="truncate">github.com/rbrueda</span>
+							<span class="truncate 4xl:text-3xl">github.com/rbrueda</span>
 						</a>
 					</div>
 				</div>
 					
 
 			<!-- Footer -->
-			<footer class="pt-2 flex flex-col items-center text-white">
+			<footer class="p-2 4xl:p-4 4xl:text-3xl flex flex-col items-center text-white">
 				<p>&copy; 2026 Rocio Rueda. All rights reserved. </p>
 			</footer>
 

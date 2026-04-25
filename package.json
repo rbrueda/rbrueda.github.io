@@ -24,11 +24,12 @@
   "homepage": "https://github.com/rbrueda/rbrueda.github.io#readme",
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
+    "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.18.0",
     "flowbite": "^4.0.1",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^3.4.19"
   }
 }
