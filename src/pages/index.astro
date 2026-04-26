@@ -46,7 +46,7 @@ import devpostIcon from "../assets/images/devpost.svg";
             
 			<!-- Hamburger menu for smaller width -->
             <div id="mobile-menu" class="fixed top-12 lg:top-14 xl:top-16 right-0 w-80 bg-[#2A1B2E] border-b border-l border-white/10 shadow-2xl z-[49] hidden flex-col pb-16 pl-20 rounded-bl-full lg:hidden">
-                <ul class="flex flex-col gap-6 text-white/90 text-2xl text-center list-none w-full pr-4 mt-6">
+                <ul class="flex flex-col gap-6 text-white/90 text-xl sm:text-2xl text-center list-none w-full pr-4 mt-6">
                     <li><a href="#about" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">About</a></li>
                     <li><a href="#experience" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">Experience</a></li>
                     <li><a href="#projects" class="mobile-link block w-full py-2 hover:text-[#d68fb4] transition-colors">Projects</a></li>
@@ -55,7 +55,7 @@ import devpostIcon from "../assets/images/devpost.svg";
             </div>
             
 			<!-- Original menu elsewise -->
-            <ul class="hidden lg:flex gap-6 4xl:gap-12 text-white/90 list-none text-xl md:text-2xl 4xl:text-5xl relative z-10">
+            <ul class="hidden lg:flex gap-6 4xl:gap-12 text-white/90 list-none text-xl 4xl:text-5xl relative z-10">
                 <li><a href="#about" class="hover:bg-[#503C67] rounded-lg transition-colors">About</a></li>
                 <li><a href="#experience" class="hover:bg-[#503C67] rounded-lg transition-colors">Experience</a></li>
                 <li><a href="#projects" class="hover:bg-[#503C67] rounded-lg transition-colors">Projects</a></li>
@@ -107,60 +107,60 @@ import devpostIcon from "../assets/images/devpost.svg";
 							
 							<h1 class="text-[clamp(1.875rem,6vh,3rem)] 4xl:text-8xl text-white">Rocio Rueda</h1>
 							
-							<h3 class="text-base sm:text-xl lg:text-2xl 4xl:text-5xl text-white bg-black/20 py-2 px-6 rounded-xl">
+							<h3 class="text-[clamp(1.25rem,2.5vw,1.5rem)] 4xl:text-5xl text-white bg-black/20 py-2 px-6 rounded-xl">
 								Software and ML Enthusiast
 							</h3>
 							
-							<h3 class="relative inline-flex items-center justify-center text-sm sm:text-lg lg:text-xl 4xl:text-4xl text-white bg-black/30 overflow-hidden rounded-xl">
+							<h3 class="relative inline-flex items-center justify-center text-[clamp(1rem,2vw,1.25rem)] 4xl:text-4xl text-white bg-black/30 overflow-hidden rounded-xl">
 								<span class="py-2 pl-5 sm:pl-8 md:pl-10 4xl:pl-14 pr-12 sm:pr-16 text-center">BSc Computer Science Student</span>
 								<div class="absolute right-0 top-0 bottom-0 w-10 sm:w-14 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors shrink-0">
 									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
 								</div>
 							</h3>
+							
 						</div>
 					</div>
 
 					<!-- Social media buttons -->
-					<ul class="flex flex-wrap justify-center pt-[clamp(1rem,4vh,1.5rem)] gap-3 sm:gap-4 animate-fade-up delay-200">
+					<ul class="flex flex-wrap justify-center pt-[clamp(1rem,4vh,1.5rem)] gap-[clamp(0.5rem,2vh,1rem)] animate-fade-up delay-200">
 						<!-- LinkedIn -->
 						<li>
 							<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" aria-label="LinkedIn Profile"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
+							class="relative block rounded-full border border-white/25 bg-white/10 p-[clamp(0.75rem,3vh,1.5rem)] 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fab fa-linkedin absolute top-1/2 left-1/2 text-[clamp(14px,2.5vh,20px)] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 						<!-- GitHub -->
 						<li>
 							<a href="https://github.com/rbrueda" aria-label="GitHub Profile"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
+							class="relative block rounded-full border border-white/25 bg-white/10 p-[clamp(0.75rem,3vh,1.5rem)] 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fab fa-github absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fab fa-github absolute top-1/2 left-1/2 text-[clamp(14px,2.5vh,20px)] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 						<!-- Devpost -->
 						<!-- since devpost does not have built-in Font Awesome class, this approach allows it to behave like one -->
 						<li>
-							<a href="https://devpost.com/rbrueda"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
+							<a href="https://devpost.com/rbrueda" aria-label="Devpost Profile"
+							class="relative block rounded-full border border-white/25 bg-white/10 p-[clamp(0.75rem,3vh,1.5rem)] 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
 								<span aria-hidden="true"
 									style={`-webkit-mask-image: url('${devpostIcon.src}'); mask-image: url('${devpostIcon.src}');`}
-									class="absolute top-1/2 left-1/2 h-[16px] w-[16px] sm:h-[20px] sm:w-[20px] 4xl:h-[40px] 4xl:w-[40px] bg-white
+									class="absolute top-1/2 left-1/2 h-[clamp(14px,2.5vh,20px)] w-[clamp(14px,2.5vh,20px)] 4xl:h-[40px] 4xl:w-[40px] bg-white
 											-translate-x-1/2 -translate-y-1/2
 											[-webkit-mask-repeat:no-repeat] [mask-repeat:no-repeat]
 											[-webkit-mask-position:center] [mask-position:center]
 											[-webkit-mask-size:contain] [mask-size:contain]">
 								</span>
-								<span class="sr-only">Devpost</span>
 							</a>
 						</li>
 						<!-- Email -->
 						<li>
 							<a href="mailto:rbrueda8@gmail.com" aria-label="Send an Email"
-							class="relative block rounded-full border border-white/25 bg-white/10 p-5 sm:p-6 4xl:p-12
+							class="relative block rounded-full border border-white/25 bg-white/10 p-[clamp(0.75rem,3vh,1.5rem)] 4xl:p-12
 									transition-all duration-200 ease-in-out hover:bg-white/25">
-								<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[16px] sm:text-[20px] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
+								<i class="fas fa-envelope absolute top-1/2 left-1/2 text-[clamp(14px,2.5vh,20px)] 4xl:text-[40px] text-white -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
 							</a>
 						</li>
 					</ul>
