@@ -74,3 +74,19 @@ h1, h2, h3, .font-serif, .mobile-link, nav a {
         box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0); 
     }
 }
+/* Custom continuous background fade */
+@keyframes pulseBg {
+    0%, 100% { 
+        background-color: transparent; 
+        color: rgba(255, 255, 255, 0.5); /* Faded white text */
+    }
+    50% { 
+        background-color: #DEB5CA;       /* Pink background */
+        color: rgba(255, 255, 255, 1);   /* Solid white text */
+    }
+}
+
+.animate-pulse-bg {
+    /* s controls the speed */
+    animation: pulseBg 3s infinite ease-in-out; 
+}
