@@ -85,15 +85,13 @@ import devpostIcon from "../assets/images/devpost.svg";
 		<!-- main tag that ensures consistent padding across the web page -->
         <main class="w-full min-h-screen pb-6 p-6 md:pb-8 md:px-8 lg:pt-14 lg:pb-10 lg:px-10 xl:p-16 4xl:p-24">
 			<!-- Home/Hero Section -->
-			<section id="home" class="relative min-h-[85vh] lg:min-h-[calc(100vh-10rem)] flex flex-col items-center py-8 fade-content visible">
+			<section id="home" class="relative min-h-[85vh] lg:min-h-[calc(100vh-10rem)] flex flex-col items-center justify-center py-8 fade-content visible">
 				<!-- Avatar container -->
 				<div class="flex flex-col items-center justify-center flex-1 w-full max-w-2xl px-2 mt-8 lg:mt-0">
-					
-					<div class="animate-fade-up shrink-0 mb-6">
-						<div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 4xl:w-[600px] 4xl:h-[600px] rounded-full border border-white/50 overflow-hidden 
+					<div class="animate-fade-up shrink-0 mb-[clamp(1rem,3vh,1.5rem)]">
+						<div class="relative aspect-square h-[25vh] min-h-[10rem] max-h-[18rem] 4xl:h-[35vh] 4xl:min-h-[400px] 4xl:max-h-[600px] rounded-full border border-white/50 overflow-hidden 
 									shadow-[inset_0_0_0_1px_rgba(222,181,202,0.35),0_0_8px_0_rgba(222,181,202,0.8)]
-									transition-all duration-500 ease-in-out hover:-translate-y-3">
-							
+									transition-all duration-500 ease-in-out hover:-translate-y-3">	
 							<Image
 								src={import("../assets/images/avatar.jpg")}
 								alt="Rocio Rueda"
@@ -105,13 +103,16 @@ import devpostIcon from "../assets/images/devpost.svg";
 						</div>
 					</div>
 					<!-- Info and pitch text -->
-					<!-- Content wrapped relative to text width size -->
+					<!-- Content wrapped relative to text width and height size -->
 					<div class="animate-fade-up delay-100 w-full text-center">
-						<div class="flex flex-col items-center gap-2 sm:gap-3 transition-all duration-500 ease-in-out hover:-translate-y-2 w-full">
-							<h1 class="text-3xl sm:text-4xl lg:text-5xl 4xl:text-8xl text-white">Rocio Rueda</h1>
+						<div class="flex flex-col items-center gap-[clamp(0.5rem,2vh,0.75rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 w-full">
+							
+							<h1 class="text-[clamp(1.875rem,6vh,3rem)] 4xl:text-8xl text-white">Rocio Rueda</h1>
+							
 							<h3 class="text-base sm:text-xl lg:text-2xl 4xl:text-5xl text-white bg-black/20 py-2 px-6 rounded-xl">
 								Software and ML Enthusiast
 							</h3>
+							
 							<h3 class="relative inline-flex items-center justify-center text-sm sm:text-lg lg:text-xl 4xl:text-4xl text-white bg-black/30 overflow-hidden rounded-xl">
 								<span class="py-2 pl-5 sm:pl-8 md:pl-10 4xl:pl-14 pr-12 sm:pr-16 text-center">BSc Computer Science Student</span>
 								<div class="absolute right-0 top-0 bottom-0 w-10 sm:w-14 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DEB5CA] cursor-pointer transition-colors shrink-0">
@@ -122,7 +123,7 @@ import devpostIcon from "../assets/images/devpost.svg";
 					</div>
 
 					<!-- Social media buttons -->
-					<ul class="flex flex-wrap justify-center pt-6 gap-3 sm:gap-4 animate-fade-up delay-200">
+					<ul class="flex flex-wrap justify-center pt-[clamp(1rem,4vh,1.5rem)] gap-3 sm:gap-4 animate-fade-up delay-200">
 						<!-- LinkedIn -->
 						<li>
 							<a href="https://www.linkedin.com/in/rocio-rueda-705a4a26a/" aria-label="LinkedIn Profile"
