@@ -2,17 +2,25 @@
 import { Image } from "astro:assets";
 import "../assets/css/tailwind.css";
 import "../assets/css/main.css";
+import logo from "../assets/images/logo.svg";
 import devpostIcon from "../assets/images/devpost.svg";
+import contactLogo from "../assets/images/contact/contact.svg";
 ---
 
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
         <title>Rocio Rueda</title>
-		<!-- todo add icon here -->
+		<!-- todo change icon later -->
+		<link rel="icon" type="image/svg+xml" href={logo.src} />
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-		<!-- todo: look into SOD -->
+		<!-- SEO tags -->
+		<meta name="title" content="Rocio Rueda | Software Developer & Data Analyst" />
+		<meta name="description" content="Portfolio of Rocio Rueda, a Software Developer and Data Analyst based in Windsor. Specializing in machine learning, full-stack development, and bioinformatics." />
+		<meta name="keywords" content="Rocio Rueda, Software Developer, Data Analyst, Machine Learning, Full-Stack Development, Python, React, Computer Science, Windsor" />
+		<meta name="author" content="Rocio Rueda" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Quicksand&family=Lora&family=Nunito&family=Emilys+Candy&family=Princess+Sofia&family=Spirax&display=swap" rel="stylesheet">
@@ -37,12 +45,14 @@ import devpostIcon from "../assets/images/devpost.svg";
             </div>
             
 			<!-- Hero Section Link -->
-            <a href="#home" class="hover:bg-[#503C67] rounded-lg transition-colors relative z-10">
-                <!-- todo: add icon here I made -->
-				<div class="flex items-center text-white text-xl md:text-2xl 4xl:text-5xl">
-                    <i class="fas fa-laptop mr-2" aria-hidden="true"></i> Rocio
-                </div>
-            </a>
+            <a href="#home" class="w-fit inline-flex items-center justify-center px-2 py-1 text-white text-xl md:text-2xl 4xl:text-5xl hover:bg-[#503C67] rounded-lg transition-colors relative z-10">
+				<Image 
+					src={logo} 
+					alt="Rocio Logo" 
+					class="w-16 h-16 md:w-20 md:h-20 4xl:w-32 4xl:h-32 mr-3 object-contain" 
+				/>  
+				<span>Rocio</span>	
+			</a>
             
 			<!-- Hamburger menu for smaller width -->
             <div id="mobile-menu" class="fixed top-12 lg:top-14 xl:top-16 right-0 w-80 bg-[#2A1B2E] border-b border-l border-white/10 shadow-2xl z-[49] hidden flex-col pb-16 pl-20 rounded-bl-full lg:hidden">
@@ -73,7 +83,7 @@ import devpostIcon from "../assets/images/devpost.svg";
         </nav>
         
 		<!-- nav bar left -->
-        <nav class="fixed top-12 4xl:top-24 left-0 w-6 4xl:w-24 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] 4xl:h-[calc(100vh-9rem)] bg-[#2A1B2E] z-50 flex flex-col justify-center items-center gap-8">
+        <nav class="fixed top-12 4xl:top-24 left-0 w-6 4xl:w-24 h-[calc(100vh-4.5rem)] lg:h-[calc(100vh-6rem)] xl:h-[calc(100vh-8rem)] 4xl:h-[calc(100vh-9rem)] bg-[#2A1B2E] z-49 flex flex-col justify-center items-center gap-8">
 		</nav>
 
 		<!-- nav bar right -->
@@ -578,10 +588,13 @@ import devpostIcon from "../assets/images/devpost.svg";
 
 				<!-- Contact Info -->
 				<div class="reveal flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-5xl 4xl:max-w-[2400px] mx-auto border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md shadow-2xl">
-					<!-- Logo Content -->
-					<div class="flex items-center justify-center w-28 h-28 md:w-36 md:h-36 4xl:w-72 4xl:h-72 bg-white/5 rounded-full border border-white/10 shadow-inner shrink-0">
-						<!-- todo add logo here -->
-						<i class="fas fa-laptop-code text-5xl md:text-6xl 4xl:text-9xl text-[#deb5ca]" aria-hidden="true"></i>
+					<!-- Contact Logo Content -->
+					<div class="flex items-center justify-center w-28 h-28 md:w-56 md:h-56 4xl:w-96 4xl:h-96 bg-white/5 rounded-full border border-white/10 shadow-inner shrink-0">			
+						<Image 
+							src={contactLogo} 
+							alt="Contact Icon" 
+							class="w-28 h-28 md:w-56 md:h-56 4xl:w-96 4xl:h-96 object-contain" 
+						/>			
 					</div>
 					<!-- Link Content -->
 					<div class="flex flex-col gap-5 text-white font-semibold text-base md:text-lg w-full max-w-sm 4xl:max-w-[600px]">
